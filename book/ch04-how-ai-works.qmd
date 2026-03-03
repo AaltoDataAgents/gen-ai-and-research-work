@@ -1,0 +1,92 @@
+---
+title: "How Generative AI Works"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+To use generative AI tools critically and responsibly, researchers need a working understanding of how these systems are built and where they fundamentally differ from human reasoning. This chapter provides a conceptual (non-mathematical) overview of large language models, their training process, and the technical reasons behind their limitations and failures.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Describe at a conceptual level how large language models are trained and how they generate text
+- Explain what tokenisation is and why it matters for how AI processes research text
+- Identify the main categories of limitation and failure modes in current generative AI systems
+- Explain why LLMs produce plausible-sounding but sometimes incorrect outputs
+- Connect technical limitations to practical implications for research use
+:::
+
+## What Is a Large Language Model?
+
+- From rule-based systems to neural networks to transformers
+- Training on large corpora: what data, and whose data?
+- The prediction task: next-token prediction as the core mechanism
+- Parameters, scale, and emergent capabilities
+
+## Tokenisation
+
+- What tokens are and how text is split
+- Why tokenisation affects how AI handles numbers, names, non-English text, and specialised vocabulary
+- Implications for prompting in technical and scientific domains
+
+## How Text Generation Works
+
+- Probability distributions over tokens
+- Temperature, sampling, and why outputs vary
+- Context windows: what the model "sees" at any moment
+- The absence of memory between sessions (in most systems)
+
+## Limitations and Failure Modes
+
+- Hallucination: generating confident but false information
+- Knowledge cutoffs and static training data
+- Sensitivity to prompt wording — and what this reveals
+- Reasoning limitations: pattern matching vs. logical inference
+- Bias amplification from training data
+- Inability to verify or update its own outputs
+
+## Why AI Fails in Research Contexts
+
+- Fabricated citations and plausible-but-wrong claims
+- Discipline-specific knowledge gaps
+- Inconsistency across conversations
+- Over-confidence in uncertain domains
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. After learning how LLMs generate text, has your intuition about AI "understanding" changed? What does "understanding" even mean in this context?
+2. Which of the failure modes described in this chapter concerns you most for your own research area?
+3. If an AI produces a confident, well-written, but factually wrong paragraph, what does this reveal about the limits of using fluency as a quality signal?
+4. How might the knowledge cutoff of an AI system create specific risks in fast-moving research fields?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — Exposing tokenisation limits
+**Tool**: [arena.ai](https://arena.ai) (free, battle mode)
+
+In battle mode, submit: *"Count the number of the letter 'r' in the word 'strawberry'."* Observe whether either model makes an error. This is a known failure case caused by how text is tokenised — the model never "sees" individual letters. Vote for the more accurate response, then reveal the models. Discuss: if an AI cannot reliably count letters in a single word, what does this imply for tasks like character-level text analysis in research?
+
+### Exercise 2 — Finding the knowledge cutoff
+**Tool**: [duck.ai](https://duck.ai) (free, private)
+
+First, ask the model: *"What is your knowledge cutoff date?"* Then ask it about a real event you know occurred after that date (e.g., a recent publication, policy change, or conference in your field). Observe how the model responds: does it acknowledge uncertainty, confabulate, or refuse? Document the response. What does this mean for researchers who use AI for literature review or horizon scanning?
+
+### Exercise 3 — Non-determinism and consistency
+**Tool**: [arena.ai](https://arena.ai) (free, battle mode)
+
+Submit a simple but open-ended research question from your field twice in two separate sessions. Compare the two responses. Do they give different conclusions, different sources, or different structures? Note any inconsistencies. Discuss: if the same prompt can produce different outputs, what are the implications for reproducibility in research that relies on AI?
+
+## References
+
+1. Alan Turing Institute. *Introduction to Transparent Machine Learning*. Free Jupyter Notebook course. MIT Licence. GitHub. [github.com/alan-turing-institute](https://github.com/alan-turing-institute)
+2. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
+3. Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? In *Proceedings of FAccT '21* (pp. 610–623). ACM. [doi.org/10.1145/3442188.3445922](https://doi.org/10.1145/3442188.3445922)
+4. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. In *Advances in Neural Information Processing Systems* (NeurIPS), 30. [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)

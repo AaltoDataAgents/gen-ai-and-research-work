@@ -1,0 +1,87 @@
+---
+title: "Research Ethics & Responsible AI"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+Generative AI tools raise fundamental ethical questions that are inseparable from their use in research. This chapter examines the values, principles, and frameworks that should guide researchers when deciding whether and how to use AI — with attention to fairness, societal impact, and the responsibilities that come with producing knowledge.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Articulate core ethical principles relevant to AI use in research contexts
+- Identify sources of bias in AI systems and their potential impact on research outputs
+- Evaluate a research scenario for ethical risks associated with AI use
+- Apply transparency and accountability norms to your own AI-assisted work
+- Distinguish between individual ethical responsibility and systemic/structural issues in AI
+:::
+
+## Core Ethical Principles for AI in Research
+
+- Beneficence and non-maleficence: does the use of AI serve research participants and society?
+- Autonomy: whose choices and voices are amplified or marginalised?
+- Justice and fairness: who benefits from AI-assisted research and who bears the risks?
+- Transparency: can you explain and justify your use of AI to peers, participants, and the public?
+
+## Bias and Fairness in AI Systems
+
+- Training data reflects historical and social inequalities
+- Outputs can reinforce stereotypes or systematically disadvantage certain groups
+- Disciplinary and linguistic biases in large language models
+- Strategies for identifying and mitigating bias in research workflows
+
+## Societal Impact of AI-Assisted Research
+
+- Downstream effects of publishing AI-assisted findings
+- Dual-use risks: research that could cause harm if misapplied
+- Environmental costs of large-scale AI use
+- Responsibilities toward research participants and communities
+
+## Transparency and Accountability
+
+- Disclosure norms: when and how to declare AI use
+- Maintaining an audit trail for AI-assisted decisions
+- Accountability when AI outputs are wrong or harmful
+- Institutional and professional frameworks for responsible AI
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. Can you think of a research scenario in your field where using generative AI might create an ethical problem that would not arise without it?
+2. If an AI system produces a biased output that influences a published finding, who is responsible — the researcher, the tool developer, or the institution?
+3. How transparent should researchers be about AI use? Should the standard differ between different types of use (e.g., drafting text vs. analysing data)?
+4. What ethical frameworks from your discipline's existing research ethics codes could apply to AI use?
+5. Is there a type of research where you believe generative AI should never be used? Why?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — Probing for bias
+**Tool**: [arena.ai](https://arena.ai) (free, battle mode)
+
+In battle mode, submit the prompt: *"Describe the contributions of women to 20th century science."* Without knowing which models you are comparing, vote for the response you find more balanced and historically accurate. After voting, check the model names. Were there differences in how each model handled potential stereotypes or omissions? Discuss with a peer what you noticed and why it might matter for research.
+
+### Exercise 2 — AI self-awareness about ethics
+**Tool**: [duck.ai](https://duck.ai) (free, private)
+
+Ask the AI: *"List the main ethical concerns with using AI for clinical research involving vulnerable populations."* Then follow up with: *"Now critically evaluate your own answer — what did you miss or oversimplify?"* Compare the two responses. What does the self-critique add? What does it still fail to address? Reflect on whether an AI can meaningfully audit its own ethical blind spots.
+
+### Exercise 3 — Who is responsible?
+**Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant)
+
+Ask: *"If an AI tool used in a research project causes harm to participants — for example, by generating stigmatising language in a report — who bears responsibility: the researcher, the institution, or the AI developer?"* Compare the AI's answer with your own view and with your group's discussion. Identify what the AI gets right, what it omits, and whether it acknowledges uncertainty.
+
+## References
+
+1. Alan Turing Institute. *Operationalising Ethics in AI* (intermediate and expert levels). Open licence. [turing.ac.uk/courses](https://www.turing.ac.uk/courses)
+2. Alan Turing Institute. *Assessing and Mitigating Bias in AI*. Open licence. [turing.ac.uk/courses](https://www.turing.ac.uk/courses)
+3. EDUCAUSE AI Literacy Working Group. *AI Literacy in Teaching and Learning*. EDUCAUSE. [educause.edu](https://www.educause.edu)
+4. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
+5. UNESCO. (2021). *Recommendation on the Ethics of Artificial Intelligence*. UNESCO. [unesdoc.unesco.org](https://unesdoc.unesco.org/ark:/48223/pf0000381137)
+6. Jobin, A., Ienca, M., & Vayena, E. (2019). The global landscape of AI ethics guidelines. *Nature Machine Intelligence*, 1(9), 389–399. [doi.org/10.1038/s42256-019-0088-2](https://doi.org/10.1038/s42256-019-0088-2)

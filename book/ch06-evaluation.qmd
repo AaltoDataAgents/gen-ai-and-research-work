@@ -1,0 +1,95 @@
+---
+title: "Evaluating AI Outputs"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+Producing an AI output is only the beginning. The critical work lies in evaluating whether that output is accurate, appropriate, and fit for purpose. This chapter develops a systematic approach to verifying AI outputs, recognising when AI is not the right tool, and avoiding the cognitive traps that make AI errors hard to catch.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Define hallucination and explain why it occurs in language models
+- Apply verification strategies appropriate to different types of AI output
+- Recognise automation bias and describe strategies for counteracting it
+- Identify research contexts where AI use introduces unacceptable risk
+- Develop a personal or team protocol for reviewing AI-assisted work before use
+:::
+
+## Understanding Hallucination
+
+- What hallucination is: confident, fluent, wrong output
+- Why hallucination is an intrinsic property of the architecture, not a fixable bug
+- Types of hallucination: fabricated facts, invented citations, false attributions
+- Why hallucinations are especially dangerous in research contexts
+
+## Verification Strategies
+
+- Primary source checking: never trust a citation without verifying it
+- Cross-referencing: using multiple sources to triangulate claims
+- Domain expertise as a filter: what you already know that the AI doesn't
+- Structured checklists for reviewing AI-assisted text or analysis
+- Tools that can assist with fact-checking and citation verification
+
+## Automation Bias
+
+- Definition: the tendency to over-trust automated outputs
+- Why confident, well-formatted text is especially prone to uncritical acceptance
+- Cognitive load and review fatigue as compounding factors
+- Strategies: adversarial reading, deliberate scepticism, team review
+
+## When Not to Use AI
+
+- High-stakes decisions requiring accountability and explainability
+- Tasks requiring up-to-date or highly specialised knowledge
+- Contexts involving sensitive or confidential information
+- Situations where errors would be difficult to detect or costly to correct
+- When the effort to verify exceeds the effort to do the task manually
+
+## Building a Review Protocol
+
+- Defining review responsibilities in collaborative projects
+- Documenting what was AI-generated and what was verified
+- Integrating AI review into existing quality assurance processes
+- Escalation: what to do when you are uncertain about an AI output
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. Have you ever accepted an AI output without verifying it, and later discovered an error? What happened?
+2. How would you explain the concept of automation bias to a colleague who thinks AI tools are more reliable than humans?
+3. Draft a simple checklist your research team could use before including any AI-generated content in a publication. What would be on it?
+4. Are there types of AI output that you think are inherently more trustworthy than others? What makes the difference?
+5. At what point does verifying AI output become more effort than it is worth?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — The hallucination audit
+**Tool**: [duck.ai](https://duck.ai) or [lumo.proton.me](https://lumo.proton.me) (both free, private)
+
+Ask the AI: *"Give me five key academic references on [a topic in your field]."* For each reference, attempt to verify it exists using Google Scholar or your institution's library database. Record how many are: (a) fully correct, (b) partially correct (author or title wrong), or (c) entirely fabricated. Calculate the "hallucination rate" for this prompt. Reflect on what you would have done if you had just copied these references into a paper without checking.
+
+### Exercise 2 — Fluency vs. accuracy
+**Tool**: [arena.ai](https://arena.ai) (free, battle mode)
+
+Submit a factual question from your research domain in battle mode. Read both responses carefully and vote for the one that seems more accurate — before doing any fact-checking. Then verify the key claims in both responses against primary sources. Did you vote for the more accurate response, or the more fluently written one? What does this reveal about automation bias?
+
+### Exercise 3 — Adversarial reading
+**Tool**: [duck.ai](https://duck.ai) (free, private)
+
+Ask the AI to write a short paragraph on a topic you know well. Then apply the SIFT method to each factual claim: **S**top and assess before sharing; **I**nvestigate the source; **F**ind better coverage; **T**race claims to their original context. Document each step in a table. How many claims required correction? Share your table with a peer and compare which errors each of you caught first.
+
+## References
+
+1. Flagler College Library. *AI Hallucinations: What They Are and How to Avoid Them*. Open guide. CC BY-NC-SA. [libguides.flagler.edu](https://libguides.flagler.edu)
+2. Center for Engaged Learning. *Why AI Hallucinations Matter Beyond Academic Integrity*. Elon University. [engagedlearning.elon.edu](https://www.engagedlearning.elon.edu)
+3. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
+4. Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y. J., Madotto, A., & Fung, P. (2023). Survey of hallucination in natural language generation. *ACM Computing Surveys*, 55(12), 1–38. [doi.org/10.1145/3571730](https://doi.org/10.1145/3571730)
+5. Buccinca, Z., Malaya, M. B., & Gajos, K. Z. (2021). To trust or to think: Cognitive forcing functions can reduce overreliance on AI in AI-assisted decision making. *Proceedings of the ACM on Human-Computer Interaction (CSCW)*, 5, 188. [doi.org/10.1145/3449287](https://doi.org/10.1145/3449287)

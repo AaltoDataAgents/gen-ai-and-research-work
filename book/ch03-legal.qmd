@@ -1,0 +1,87 @@
+---
+title: "Legal, Data Protection & Compliance"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+Using generative AI in research is not only an ethical and integrity matter — it also has legal dimensions that researchers must navigate carefully. This chapter covers the key legal frameworks affecting AI use in research, including data protection law, intellectual property, and institutional compliance requirements.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Explain the key provisions of GDPR relevant to using AI with research data
+- Identify intellectual property risks associated with AI-generated content
+- Assess whether a given research workflow involving AI is likely to be legally compliant
+- Locate and apply your institution's policies on AI use and data handling
+- Describe categories of data that must never be entered into public AI systems
+:::
+
+## Data Protection and GDPR
+
+- Core GDPR principles: lawfulness, purpose limitation, data minimisation
+- What counts as personal data — and what becomes personal through AI processing
+- Using AI tools with participant data: risks and safeguards
+- Data processing agreements and when they are required
+- Cross-border data transfer issues with cloud-based AI services
+
+## Sensitive Data Categories
+
+- Special categories under GDPR (health, ethnicity, religion, political opinions, etc.)
+- Research data that is sensitive for reasons beyond GDPR (national security, commercial confidentiality)
+- Practical rules: what must never be entered into public AI tools
+- Anonymisation vs. pseudonymisation — what actually protects you
+
+## Intellectual Property and Copyright
+
+- Who owns AI-generated content? Current legal landscape
+- Copyright in training data: ongoing litigation and implications for researchers
+- IP ownership of AI outputs in employment and funded research contexts
+- Risks of reproducing copyrighted material via AI-generated text
+
+## Institutional Policies and Compliance
+
+- Why institutional policies differ from legal minimums
+- How to find and interpret your institution's AI and data governance policies
+- Ethics committee considerations when AI is part of a research protocol
+- Contractual obligations in grant agreements and research collaborations
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. A researcher wants to use an AI chatbot to help analyse qualitative interview transcripts. What legal and ethical questions should they ask before doing so?
+2. If an AI tool generates a figure or a piece of text that closely resembles a copyrighted work, who is liable?
+3. How should institutional policies on AI use be communicated and enforced — and who should be involved in writing them?
+4. Do you think current data protection laws are adequate for governing AI in research? What gaps do you see?
+5. Have you encountered a situation where you were unsure whether a research activity was legally compliant? What did you do?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — A GDPR-compliant tool in practice
+**Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant, zero-access encryption)
+
+Read Lumo's privacy notice carefully. List three specific data protection features it offers (e.g., no logging, local encryption, Swiss legal jurisdiction). For each feature, explain why it would — or would not — be sufficient to make it legally appropriate for processing research participant data under GDPR. Compare your list with a peer's and discuss where you disagree.
+
+### Exercise 2 — Advising on a sensitive data scenario
+**Tool**: [duck.ai](https://duck.ai) (free, private)
+
+Describe a fictional research scenario to the AI: *"I have survey responses from 80 participants about their mental health history, stored as a spreadsheet. I want to use an AI tool to identify themes. What legal and ethical steps must I take before doing so?"* Evaluate the advice. Does the AI mention GDPR Article 9 (special category data)? Does it recommend a data processing agreement? Cross-check its advice against the plain-language summary on the ICO website (ico.org.uk).
+
+### Exercise 3 — Comparing legal reasoning across models
+**Tool**: [arena.ai](https://arena.ai) (free, battle mode)
+
+Submit in battle mode: *"Does GDPR apply when a researcher based in Germany uses a US-hosted AI tool to process anonymised interview transcripts from EU participants?"* Vote for the response with more rigorous legal reasoning. After voting, look up the EDPB guidelines on international data transfers (freely available at edpb.europa.eu). Which model came closer to the correct answer?
+
+## References
+
+1. Congressional Research Service. (2023). *Generative AI and Data Privacy: A Primer*. Congress.gov. [congress.gov/crs-reports](https://crsreports.congress.gov)
+2. Choudhury, A., et al. (2025). *Generative AI guidelines at top 100 QS-ranked universities: A comparative study*. arXiv:2506.20463. [arxiv.org/abs/2506.20463](https://arxiv.org/abs/2506.20463)
+3. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
+4. European Data Protection Board. (2024). *Opinion 28/2024 on certain data protection aspects related to the processing of personal data in the context of AI models*. EDPB. [edpb.europa.eu](https://www.edpb.europa.eu)
+5. European Parliament and Council. (2024). *Regulation (EU) 2024/1689 — Artificial Intelligence Act*. Official Journal of the European Union. [eur-lex.europa.eu](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)

@@ -1,0 +1,94 @@
+---
+title: "Prompting Techniques"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+Getting useful outputs from a generative AI system is a skill that can be learned and refined. This chapter introduces prompting from first principles and builds toward more advanced strategies, with examples drawn from common research tasks across the research lifecycle — from literature synthesis to manuscript drafting.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Write clear, effective prompts for a range of research tasks
+- Apply structured prompting techniques such as role prompting, chain-of-thought, and few-shot prompting
+- Identify when a prompt is likely to produce unreliable output and revise it
+- Adapt prompting strategies to different stages of the research process
+- Critically evaluate outputs from your own prompts and iterate toward better results
+:::
+
+## Foundations of Effective Prompting
+
+- What a prompt actually is — and how the model interprets it
+- The role of specificity, context, and constraints
+- Common beginner mistakes: vague prompts, missing context, single-shot expectations
+- The iterative nature of prompting: treat it as a conversation
+
+## Basic Prompting Strategies
+
+- Instruction prompts: tell the model exactly what to do
+- Persona/role prompts: "Act as a peer reviewer in ecology…"
+- Format specification: requesting bullet lists, tables, structured outputs
+- Constraints: word limits, tone, audience, exclusions
+
+## Intermediate Techniques
+
+- Chain-of-thought prompting: asking the model to reason step by step
+- Few-shot prompting: providing examples within the prompt
+- Decomposition: breaking complex tasks into sequential sub-prompts
+- Self-critique prompts: asking the AI to evaluate its own output
+
+## Research-Stage Examples
+
+- **Literature review**: summarising abstracts, identifying themes, spotting gaps
+- **Writing**: drafting introductions, restructuring arguments, improving clarity
+- **Data work**: explaining statistical output, suggesting visualisations
+- **Peer review preparation**: generating reviewer questions, stress-testing arguments
+- **Grant writing**: describing methods, writing lay summaries
+
+## Iteration and Prompt Refinement
+
+- How to diagnose a bad output and revise the prompt
+- Keeping a prompt log for reproducibility and sharing
+- When to give up on prompting and use a different approach
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. Take a real task from your current research. Write a first-attempt prompt, try it, and then revise it based on the output. What changed between your first and second prompt?
+2. How does prompting differ from a standard internet search? What habits from searching might transfer — or get in the way?
+3. Should researchers share their prompts as part of methods reporting? What would this require in practice?
+4. Are there research tasks where you think prompting is likely to fail regardless of how well the prompt is written? Why?
+5. What are the risks of becoming over-reliant on a particular prompting strategy that works well for you?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — Prompt iteration in three rounds
+**Tool**: [duck.ai](https://duck.ai) or [lumo.proton.me](https://lumo.proton.me) (both free, private)
+
+Choose a real task from your current research (e.g., summarising a concept, drafting a paragraph, generating interview questions). Write a first prompt — no more than two sentences — and submit it. Read the output, identify what is missing or off, and write a revised prompt. Repeat once more. Document all three prompts and outputs. What changed between rounds? What does this reveal about how the model interprets your instructions?
+
+### Exercise 2 — Chain-of-thought vs. direct prompting
+**Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant)
+
+Take a methodological question from your field (e.g., *"What sample size should I use for a qualitative study on burnout in healthcare workers?"*). Ask it once directly. Then ask the same question prefixed with: *"Think step by step before answering."* Compare the two responses. Did chain-of-thought prompting change the quality, structure, or caveats in the answer? Under what circumstances might it not help?
+
+### Exercise 3 — Cross-model prompt comparison
+**Tool**: [arena.ai](https://arena.ai) (free, battle mode)
+
+Take the best prompt you developed in Exercise 1. Submit it in arena battle mode, where two anonymous models will respond simultaneously. Vote for the better output. After voting, check which models you compared. Was the "winner" the model you expected? What does this suggest about the relationship between prompt quality and model quality?
+
+## References
+
+1. Cornell University. *Generative AI in Academic Research: Perspectives and Cultural Norms* (includes appendix of research-stage prompts). Cornell Research & Innovation. [research.cornell.edu](https://research.cornell.edu)
+2. EDUCAUSE AI Literacy Working Group. *AI Literacy in Teaching and Learning* (includes applied prompting guidance). EDUCAUSE. [educause.edu](https://www.educause.edu)
+3. Anthropic. *Prompt Engineering Overview*. Anthropic Documentation. [docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+4. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
+5. DAIR.AI. *Prompt Engineering Guide*. Open resource. [promptingguide.ai](https://www.promptingguide.ai)
+6. Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q., & Zhou, D. (2022). Chain-of-thought prompting elicits reasoning in large language models. In *Advances in Neural Information Processing Systems* (NeurIPS), 35. [arxiv.org/abs/2201.11903](https://arxiv.org/abs/2201.11903)

@@ -1,0 +1,99 @@
+---
+title: "Multimodal AI for Research"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+Generative AI has moved well beyond text. Researchers now have access to tools that can generate, analyse, and transform images, audio, and video — opening new possibilities for research communication, data collection, and analysis. This chapter surveys the multimodal AI landscape and equips researchers to use these tools with the same critical awareness applied to text-based systems.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Describe the main categories of multimodal AI tools relevant to research (speech, image, video)
+- Identify research workflow stages where multimodal AI can add value
+- Apply appropriate verification strategies to non-text AI outputs
+- Recognise the specific ethical and legal risks associated with synthetic media in research
+- Select appropriate tools for a given research communication or analysis task
+:::
+
+## Overview of Multimodal AI
+
+- From text-only to text + image + audio + video
+- How multimodal models are trained and what makes them different from LLMs
+- The research relevance of multimodal capability
+
+## Speech and Audio AI
+
+- Automatic speech recognition (ASR): transcription tools and their accuracy
+- Text-to-speech and synthetic voices: use cases in research communication
+- Audio analysis: speaker identification, sentiment, language detection
+- Risks: transcription errors, consent issues with recorded participants
+
+## Image AI for Research
+
+- Image generation: use cases and limitations for scientific illustration
+- Image analysis and description: accessibility, annotation, classification
+- Optical character recognition and document analysis
+- Integrity concerns: image manipulation detection, synthetic data
+
+## Video AI
+
+- Video summarisation and chapter generation
+- Automated captioning and translation
+- Synthetic video and deepfakes: risks for misinformation and research trust
+- Archival and dissemination use cases
+
+## Verification in Multimodal Contexts
+
+- Why non-text outputs are harder to verify than text
+- Detecting AI-generated images and audio
+- Provenance metadata and watermarking standards
+- Institutional and journal policies on synthetic images in publications
+
+## Research Communication Applications
+
+- AI-assisted science communication for non-specialist audiences
+- Generating accessible formats: audio descriptions, simplified text
+- Interactive and visual data presentation
+- Ethical considerations in automated science journalism and outreach
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. Can you think of a research communication challenge in your field where a multimodal AI tool might genuinely help? What would the risks be?
+2. If a researcher uses an AI image generation tool to create a figure for a paper, what disclosure would be appropriate? Does it matter whether the figure shows data or is conceptual?
+3. How should journals and conferences update their policies to address synthetic media?
+4. What concerns do you have about using AI transcription tools with recorded research participants?
+5. Where do you see multimodal AI having the greatest positive impact on research in the next five years — and the greatest risk?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — Image generation and research usability
+**Tool**: [arena.ai](https://arena.ai) (free, image battle mode)
+
+Open arena.ai's image battle section. Submit a prompt for a conceptual research diagram, e.g.: *"A simple diagram showing the relationship between sample size, statistical power, and effect size in a scientific study."* Compare the two generated images. Vote for the more accurate and clear one. Then discuss: would either image be usable in a publication as-is? What would need to change? What disclosure would be required?
+
+### Exercise 2 — AI image description for accessibility
+**Tool**: [duck.ai](https://duck.ai) (free, supports image input with some models)
+
+Select a figure from a published paper in your field (one you have access to). Upload it to duck.ai (using a model that supports image input) and ask: *"Describe this figure to a reader who cannot see it, using plain language."* Evaluate the description for accuracy. What details did the AI miss or misinterpret? How would you use this capability to make your own research more accessible?
+
+### Exercise 3 — Plain-language science communication
+**Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant)
+
+Take the abstract of a recent paper from your field. Paste it into Lumo and ask: *"Rewrite this abstract as a 150-word summary for a general audience with no scientific background."* Evaluate the result. What technical nuance was lost? What was clarified? Now ask Lumo to generate a list of five social media posts based on the same abstract. Discuss: what verification steps would be needed before using AI-generated science communication publicly?
+
+## References
+
+1. Alan Turing Institute. *Responsible AI Course Suite* (includes multimodal and image model content). Open licence. [turing.ac.uk/courses](https://www.turing.ac.uk/courses)
+2. EDUCAUSE. *AI Literacy Resources and Library Guides* (covers image generation and verification workflows). EDUCAUSE. [educause.edu](https://www.educause.edu)
+3. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
+4. Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., Krueger, G., & Sutskever, I. (2021). Learning transferable visual models from natural language supervision (CLIP). In *Proceedings of ICML*. [arxiv.org/abs/2103.00020](https://arxiv.org/abs/2103.00020)
+5. Content Authenticity Initiative. *C2PA: Coalition for Content Provenance and Authenticity — Specification and Standards*. [contentauthenticity.org](https://contentauthenticity.org)

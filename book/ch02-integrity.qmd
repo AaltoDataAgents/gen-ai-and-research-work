@@ -1,0 +1,91 @@
+---
+title: "Research Integrity, Authorship & Policies"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+The rise of generative AI has prompted rapid changes to the norms and policies governing academic authorship, publication, and funding. This chapter examines what research integrity means in an AI-assisted environment, surveys the evolving landscape of journal and funder policies, and helps researchers understand their responsibilities around attribution and disclosure.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Define research integrity and explain how AI use intersects with its core principles
+- Describe current authorship norms and why AI tools cannot qualify as authors
+- Identify the AI disclosure requirements of major funders (e.g., EU Horizon, NIH) and publishers
+- Develop a disclosure statement for AI use in a manuscript or grant application
+- Recognise practices that could constitute misconduct when AI is involved
+:::
+
+## Research Integrity and AI
+
+- Core principles: honesty, rigour, transparency, accountability
+- How AI use can inadvertently undermine integrity (fabricated citations, unverified claims)
+- The distinction between using AI as a tool and delegating intellectual responsibility
+- Documentation practices that protect integrity
+
+## Authorship Norms and AI
+
+- ICMJE criteria and why AI does not meet them
+- Who bears accountability for AI-generated content in a publication
+- Ghost-writing concerns and the author's duty to verify all content
+- Emerging consensus across disciplines
+
+## Journal and Publisher Policies
+
+- Overview of policies from major publishers (Elsevier, Springer Nature, Wiley, PLOS)
+- Variation across fields and journals — why you must always check
+- Required disclosure language and where to include it
+- Consequences of non-disclosure
+
+## Funder Requirements
+
+- EU Horizon Europe: open science and AI transparency expectations
+- NIH: data sharing and responsible AI in funded research
+- National and institutional funders: variation and how to stay current
+- Integrating compliance into grant writing and project planning
+
+## Attribution and Credit
+
+- Citing AI tools: emerging standards and why it matters
+- Distinguishing AI-assisted work from wholly original contributions
+- Attribution in collaborative and interdisciplinary projects
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. If you used an AI tool to help write a section of a paper and then substantially edited it, how would you disclose this? Does the level of editing change your answer?
+2. A colleague argues that disclosing AI use will disadvantage their paper in peer review. How would you respond?
+3. How should research integrity policies keep pace with rapidly evolving AI capabilities? Who should be responsible for updating them?
+4. What would you do if you discovered that a co-author had used AI to generate results without disclosing it?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — Writing a disclosure statement
+**Tool**: [duck.ai](https://duck.ai) (free, private)
+
+Imagine you used an AI tool to help draft the Discussion section of a paper, then revised it substantially. Ask the AI to help you write a disclosure statement for the manuscript. Evaluate the result: is it specific enough? Does it accurately reflect what you (hypothetically) did? Now consider: the disclosure statement itself was AI-assisted — should that be disclosed too? Revise the statement accordingly.
+
+### Exercise 2 — Testing knowledge of authorship norms
+**Tool**: [arena.ai](https://arena.ai) (free, battle mode)
+
+In battle mode, submit: *"Should an AI tool be listed as an author on a scientific paper? Justify your answer with reference to established authorship criteria."* Vote for the response that best reflects current academic consensus. Then look up the ICMJE recommendations and COPE guidelines on AI authorship (both freely available online). Did the models cite them correctly? Did either model hallucinate policy details?
+
+### Exercise 3 — Verifying funder policy claims
+**Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant)
+
+Ask Lumo to summarise the EU Horizon Europe policy on AI use in funded research. Identify one specific claim in its response. Then go to the official EU Horizon Europe programme guide (freely available at ec.europa.eu) and verify that claim. Is the AI's summary accurate? What are the risks of relying on AI to interpret compliance requirements?
+
+## References
+
+1. Cornell University. *Generative AI in Academic Research: Perspectives and Cultural Norms*. Cornell Research & Innovation. Freely downloadable PDF. [research.cornell.edu](https://research.cornell.edu)
+2. Stanford University HAI. (2025). *Generative AI policies at top universities: October 2025 update*. [hai.stanford.edu](https://hai.stanford.edu)
+3. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
+4. COPE (Committee on Publication Ethics). (2023). *Authorship and AI tools*. COPE position statement. [publicationethics.org](https://publicationethics.org/cope-position-statements/ai-author)
+5. ICMJE. (2024). *Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals*. [icmje.org](https://www.icmje.org/recommendations)
