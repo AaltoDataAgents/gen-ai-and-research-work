@@ -17,6 +17,7 @@ book:
     - ch05-prompting.qmd
     - ch06-evaluation.qmd
     - ch07-multimodal.qmd
+    - ch08-conclusions.qmd
 
 format:
   html:

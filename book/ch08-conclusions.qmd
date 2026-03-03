@@ -1,0 +1,118 @@
+---
+title: "Conclusions"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+The central message of this course is simple: resist the hype, and use AI tools responsibly — if you choose to use them at all. Generative AI is neither a revolution to be embraced uncritically nor a threat to be dismissed. Researchers who approach these tools with informed scepticism, grounded in ethics, integrity, and legal awareness, are best placed to use them wisely and to help shape how they are used in research communities.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Articulate a personal, evidence-based position on the use of AI tools in your research practice
+- Identify the institutional resources and support available to you at Aalto for responsible AI use
+- Recognise the value of open, community-wide discussion about AI adoption and avoidance
+- Connect the themes across the course — ethics, integrity, law, prompting, evaluation — into a coherent framework for decision-making
+- Understand the role of academic freedom in choosing whether and how to engage with AI tools
+:::
+
+## Resisting the Hype
+
+Generative AI has attracted extraordinary media attention, commercial investment, and institutional urgency. Researchers face pressure — real or perceived — to adopt these tools to remain competitive, to accelerate publication, or simply to keep up. This course has aimed to provide a counterweight: not to discourage curiosity or experimentation, but to ensure that any use of AI in research is deliberate, transparent, and grounded in sound judgement.
+
+Resisting the hype does not mean rejecting AI. It means:
+
+- Evaluating tools critically before adopting them
+- Asking what problem a tool actually solves — and whether that problem is worth solving this way
+- Recognising that slower, more careful research is often better research
+- Maintaining the intellectual ownership and accountability that define scholarly work
+
+## Using AI Tools Responsibly
+
+If you decide to use AI tools in your research, the principles developed throughout this course provide a framework for doing so responsibly:
+
+- **Ethics first**: Consider the societal impact of your work and the tools you use. Who benefits? Who is harmed? Whose data was used to train the model?
+- **Integrity always**: Disclose your use of AI tools in accordance with your institution's policies and the norms of your field. Never misrepresent AI-generated content as your own unaided work.
+- **Legal compliance**: Respect GDPR, copyright, and data protection requirements. Do not input personal or confidential data into external AI systems without authorisation.
+- **Critical evaluation**: Verify AI outputs. Hallucinations are common; errors in AI-generated text, code, and images can be subtle and consequential.
+- **Iterative prompting**: Use structured prompting strategies and treat AI as a tool that requires skilled operation, not an oracle that produces reliable answers automatically.
+
+## Safe Implementation at Aalto
+
+Researchers at Aalto University have access to institutional AI tools that meet higher standards of privacy, security, and compliance than most publicly available alternatives:
+
+- **Aalto AI Assistant** — an institutionally managed AI chat tool available to Aalto staff and students
+- **Aalto Scientific Computing Speech2Text** — a transcription service for research audio, operated within Aalto's secure computing infrastructure
+- **Local open source LLMs at Aalto** — models that can be run locally or on Aalto servers, without data leaving the institution
+
+Using institutional tools reduces (though does not eliminate) risks related to data protection, confidentiality, and vendor lock-in. When in doubt about which tool is appropriate for your use case, seek advice before proceeding.
+
+## AI Literacy and Community Discussion
+
+One of the most important outcomes of engaging with this material is the ability to contribute constructively to conversations about AI in research — both within your own team and in wider institutional and disciplinary contexts.
+
+- **AI literacy** is not a one-time achievement. The landscape of tools, policies, and best practices is evolving rapidly. Staying informed requires ongoing engagement, critical reading, and willingness to update your views.
+- **Aalto AI Talks** provides a regular forum for staff and students to discuss how they are using AI, how they are avoiding it, and what concerns they have. These conversations matter: norms around AI in research are still being formed, and researchers have an important role in shaping them.
+- Sharing your experiences — positive and negative — helps colleagues make more informed choices and supports the development of collective good practice.
+
+## Academic Freedom and the Right Not to Use AI
+
+Academic freedom includes the right to choose your own methods. Researchers are not obliged to use AI tools, and there are many legitimate reasons to decline:
+
+- Concerns about the environmental cost of large-scale AI compute
+- Ethical objections to the labour conditions and data practices of AI companies
+- Disciplinary norms that value slowness, close reading, or tacit craft knowledge
+- Personal preferences for working without AI assistance
+
+These are valid choices that deserve respect. A healthy research community will include people who use AI tools extensively, people who use them selectively, and people who do not use them at all.
+
+## When in Doubt, Ask for Help
+
+Navigating the ethics, legality, and practicalities of AI in research is genuinely complex. You do not have to figure it out alone. Aalto's **Research Software Engineers** and **Data Agents** can provide expert guidance on:
+
+- Data protection and GDPR compliance for AI use
+- Choosing appropriate tools for specific research tasks
+- Secure computation and local model deployment
+- Institutional policies and how they apply to your situation
+
+Contact: **researchdata@aalto.fi**
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. Having completed this course, has your view of AI tools in research changed? In what direction, and why?
+2. What is one specific practice from this course that you intend to adopt (or continue) in your own research? What is one thing you intend to avoid?
+3. How would you explain responsible AI use to a colleague who has not taken this course? What would be the three most important points?
+4. What role should researchers play in shaping institutional and disciplinary norms around AI — and how might you contribute to that conversation?
+5. Is there a use of AI in research that you consider clearly unacceptable? Is there one you consider clearly acceptable? Where do you draw the line, and on what basis?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — Reflecting on your AI use policy
+**Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant)
+
+Draft a short personal AI use policy for your own research — a one-page document describing which AI tools you will use, for what purposes, under what conditions, and what you will disclose. Then paste it into Lumo and ask: *"What ethical or legal risks might this policy fail to address? What would a critic of AI use in research say about it?"* Revise your policy in response to the feedback. Discuss: how useful was AI assistance in critically evaluating an AI use policy?
+
+### Exercise 2 — Mapping institutional resources
+**Tool**: [duck.ai](https://duck.ai) (free, private)
+
+Using publicly available information, map the AI-related resources and policies available at your institution. Include: institutional AI tools, data protection guidance, research integrity policies, and any formal training or support. Then ask duck.ai: *"What questions should a researcher ask before adopting a new AI tool in their workflow?"* Compare its list to what you found. What gaps exist in your institution's current provision?
+
+### Exercise 3 — Constructing an AI literacy resource
+**Tool**: [arena.ai](https://arena.ai) (free, model comparison)
+
+Using arena.ai, submit the following prompt to two different models: *"In 200 words, explain to a researcher with no technical background why they should be sceptical of AI-generated text, even when it sounds confident and well-written."* Compare the two responses. Which is clearer? More accurate? More likely to change someone's mind? Discuss: what does this exercise reveal about the limits of using AI to teach AI literacy?
+
+## References
+
+1. ALLEA (All European Academies). *ALLEA Code of Conduct for Research Integrity*. [allea.org](https://allea.org/code-of-conduct/)
+2. TENK (Finnish National Board on Research Integrity). *The Responsible Conduct of Research and Procedures for Handling Alleged Violations of Research Integrity in Finland*. [tenk.fi](https://tenk.fi/en/research-misconduct/responsible-conduct-research-rcr)
+3. Glerean, E. & Silva, P. (2025). *AI and Research Work*. Zenodo. DOI: [10.5281/zenodo.14032261](https://doi.org/10.5281/zenodo.14032261)
+4. Muthanna, A., Chaaban, Y., & Qadhi, S. (2024). A model of the interrelationship between research ethics and research integrity. *International Journal of Qualitative Studies on Health and Well-Being*, *19*(1), 2295151. [doi.org/10.1080/17482631.2024.2295151](https://doi.org/10.1080/17482631.2024.2295151)
