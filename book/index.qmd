@@ -1,0 +1,77 @@
+---
+title: "Introduction"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This book was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+This book is a practical guide for researchers who want to understand and use generative AI tools responsibly and effectively in their work. It covers the ethical, legal, and technical dimensions of AI, as well as hands-on guidance for prompting, evaluating outputs, and working with multimodal systems. Each chapter builds toward a grounded, critical approach to integrating AI into the research lifecycle.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Describe the overall structure and purpose of this course
+- Explain why generative AI literacy is relevant for researchers across disciplines
+- Identify the key themes covered across the seven modules
+- Navigate the book and connect topics to your own research context
+- Reflect on your starting assumptions and prior experience with AI tools
+:::
+
+## What This Course Covers
+
+- Overview of the seven thematic modules
+- The research lifecycle and where AI tools appear
+- Why "generative AI" is distinct from earlier automation tools
+- The importance of combining technical understanding with ethical and legal awareness
+
+## Why It Matters for Researchers
+
+- Growing adoption of AI in literature review, writing, data analysis, and communication
+- Increasing expectations from funders, journals, and institutions around AI disclosure
+- Risks of uncritical adoption: hallucinations, bias, compliance violations
+- Opportunities for efficiency and new research approaches when used responsibly
+
+## How to Use This Book
+
+- Each chapter is self-contained but builds on prior concepts
+- Learning outcome boxes indicate what competencies each chapter develops
+- Discussion activities are designed for group or individual reflection
+- Practical exercises use free, privacy-respecting tools: [duck.ai](https://duck.ai), [lumo.proton.me](https://lumo.proton.me), and [arena.ai](https://arena.ai)
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. What generative AI tools have you already encountered or used in your research work? What were your impressions?
+2. What concerns, if any, do you have about using AI in academic research?
+3. What do you hope to learn or be able to do differently after completing this course?
+4. How do you think your field specifically will be affected by the rise of generative AI?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — First contact with an AI assistant
+**Tool**: [duck.ai](https://duck.ai) (free, no account required, private)
+
+Ask: *"What are the biggest risks of using AI in academic research?"* Then switch to a different model using the model selector and ask the same question. Note any differences in emphasis, tone, or content. Does the choice of model appear to affect the answer? Bring your observations to the group discussion.
+
+### Exercise 2 — Comparing models on the same question
+**Tool**: [arena.ai](https://arena.ai) (free, battle mode)
+
+Open the arena battle mode. Submit the same question from Exercise 1. Two anonymous models will respond simultaneously. Vote for the answer you find more nuanced and well-reasoned — before revealing which models you compared. After voting, check the model names. Were you surprised? What does this reveal about how you judge AI output?
+
+### Exercise 3 — Privacy as a design choice
+**Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant, zero-access encryption)
+
+Read Lumo's privacy notice (linked from the footer). Compare its data handling commitments to what duck.ai states. Make a list of three specific differences that would matter if you were using AI to work with research participant data. Discuss: does the choice of tool have legal or ethical implications for researchers?
+
+## References
+
+1. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
+2. EDUCAUSE AI Literacy Working Group. *AI Literacy in Teaching and Learning*. EDUCAUSE. [educause.edu](https://www.educause.edu)
+3. UNESCO. (2021). *Recommendation on the Ethics of Artificial Intelligence*. UNESCO. [unesdoc.unesco.org](https://unesdoc.unesco.org/ark:/48223/pf0000381137)
+4. EDUCAUSE. (2025). *EDUCAUSE Horizon Report: Teaching and Learning Edition*. EDUCAUSE. [educause.edu](https://www.educause.edu/horizon-report)
