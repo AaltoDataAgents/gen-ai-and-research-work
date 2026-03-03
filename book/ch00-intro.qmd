@@ -1,0 +1,178 @@
+---
+title: "Introduction: What is Generative AI?"
+---
+
+::: {.callout-warning}
+## Draft — Not Yet Reviewed
+
+This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+:::
+
+Generative AI tools are now part of the everyday landscape of academic research, yet many researchers use them without a clear picture of what they actually are, how they differ from other software, or why they behave the way they do. This chapter provides an accessible, non-technical introduction to artificial intelligence — from its broad definition down to the specific class of systems behind tools like ChatGPT, Claude, and Gemini — so that everything that follows in this course rests on a solid conceptual foundation. No prior knowledge of computer science or mathematics is assumed.
+
+::: {.callout-note}
+## Learning Outcomes
+
+By the end of this chapter you will be able to:
+
+- Define artificial intelligence and locate generative AI within the broader landscape of AI and machine learning
+- Distinguish between an AI model and an AI system, and explain why the difference matters
+- Describe at an intuitive level how a large language model generates text, using the concept of next-token prediction
+- Identify the main limitations that follow directly from how LLMs are built
+- Name the major platforms currently available to researchers and their key characteristics
+- Connect AI tools to different stages of the research lifecycle
+:::
+
+## What is Artificial Intelligence?
+
+The term "artificial intelligence" covers an enormous range of technologies, from the spam filter in your email inbox to autonomous vehicles to the chatbot you might use to help draft a grant application. To avoid confusion, it helps to start with a formal definition. The EU Artificial Intelligence Act defines an AI system as:
+
+> *A machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.* (Article 3(1), EU AI Act)
+
+The key phrase is **infers from input** — unlike conventional software that follows explicit rules written by a programmer, an AI system learns patterns from data and uses those patterns to respond to new situations it has never explicitly seen before.
+
+Artificial intelligence is a broad field with many sub-disciplines. The most relevant for understanding generative AI is the nested hierarchy shown below:
+
+- **Artificial Intelligence** is the overarching field — any machine that exhibits intelligent behaviour
+- **Machine Learning (ML)** is a subset of AI in which systems learn patterns from data rather than being explicitly programmed
+- **Deep Learning (DL)** is a subset of ML using multi-layer neural networks capable of learning very complex representations
+- **Natural Language Processing (NLP)** focuses specifically on understanding and generating human language
+- **Large Language Models (LLMs) and Generative AI** sit at the deepest level — these are deep learning systems trained on vast amounts of text (and, increasingly, other modalities) that can generate new content
+
+It is worth stressing that "AI" in everyday usage almost always refers to this last category — LLM-based systems — even though the field of AI is far broader and includes, for example, robotics, computer vision, expert systems, and theorem proving.
+
+## AI Systems and AI Models
+
+A distinction that matters in practice is the one between an **AI model** and an **AI system**.
+
+The **AI model** is like the engine of a car: it contains the learned mathematical relationships (model weights) that allow it to make predictions or generate output. On its own, the model cannot do anything — it is just a very large file of numbers. Researchers and companies who build AI develop models during a *build phase* using large datasets and significant computing resources.
+
+The **AI system** is the complete car: it wraps the model with software infrastructure — interfaces, safeguards, memory management, APIs — that allows users to interact with it. The system takes your input, passes it to the model, receives the output, and presents it to you. Everything you do when you use ChatGPT or Claude is mediated by an AI system, not the raw model.
+
+This distinction is important for researchers because:
+
+- When a tool produces bad output, the fault may lie in the model, the system design, or the way you interacted with it
+- Different systems can use the same underlying model (e.g., Microsoft Copilot uses OpenAI's models)
+- Regulatory and ethical accountability often attaches to system providers, not model developers alone
+- Privacy implications depend on the system's data handling policies, not just the model architecture
+
+## How Machine Learning Works
+
+Before understanding generative AI specifically, it helps to understand what "learning" means for a machine. A classic example is image classification — teaching a system to tell cats from dogs.
+
+**Stage 1 — Training:** A large dataset of labelled images (thousands of photos of cats and dogs, each tagged with the correct label) is fed into a machine learning algorithm. The algorithm extracts numerical features from each image and adjusts its internal parameters until it can reliably predict the correct label. The output is a *model*: a set of parameters that encodes what the algorithm has learned about the visual difference between cats and dogs.
+
+**Stage 2 — Testing (inference):** New, previously unseen images are fed into the trained model. It predicts a label based on the patterns it learned. Performance is measured by comparing predictions to known correct answers.
+
+The crucial insight is that the model never saw an explicit rule saying "if it has pointy ears and whiskers it is a cat". It learned a *statistical representation* of those features from examples. This is what makes machine learning powerful — and also what makes it fallible in ways that rule-based software is not.
+
+## How Generative AI Works: An Intuitive Explanation
+
+The cat-dog classifier predicts a **label** from an image. Generative models do something different: they predict **new content** from a prompt. The core task is the same — prediction — but the output is not a category, it is a generated object (a sentence, an image, a piece of code).
+
+For text-based systems, the key question a language model answers is: *given everything I have read so far, what is the most likely thing to come next?*
+
+### The "guess the letter" intuition
+
+Consider a simple version of this. If someone tells you they are thinking of an English word that starts with the letter **q**, and asks you to guess the next letter — most people immediately say **u**. This is not a rule you were taught; it is a statistical regularity you have absorbed from years of reading English. In almost all English words, *q* is followed by *u* (queen, quite, quiet, question…).
+
+A language model learns similar patterns, but at a vastly larger scale: not just letter pairs, but the probability distributions over all possible next *tokens* — chunks of text — given all the preceding context.
+
+### From letters to words to sentences
+
+Large language models estimate the probability of a token appearing next, given all the tokens that came before it — in the context of sentences, paragraphs, and entire documents. Given the sentence beginning *"The best thing about AI is its ability to"*, a model might assign probabilities like:
+
+- "learn" → 4.5%
+- "predict" → 3.5%
+- "make" → 3.2%
+- "understand" → 3.1%
+- "do" → 2.9%
+
+The model picks from this distribution (not always the top word — this would produce repetitive, mechanical text). It then appends that token to the context and repeats the process for the next token, and the next, until the response is complete.
+
+This "generate one token, then re-condition on all tokens so far" loop is what produces the flowing, coherent-seeming text that LLMs are known for. It also explains why **different runs of the same prompt produce different outputs** — the probabilistic sampling introduces variability, sometimes helpfully (for creative tasks) and sometimes problematically (for tasks requiring reproducibility).
+
+The parameter that controls how "adventurous" the sampling is — how far down the probability distribution the model will reach — is called **temperature**. A temperature of zero produces the single most likely token every time (deterministic but often dull). Higher temperatures introduce more variety and creativity, at the cost of coherence.
+
+## The Technical Reality: Tokens, Attention, and Scale
+
+The letter-prediction story is an intuitive entry point, but real LLMs are more complex in three important ways.
+
+**Tokens, not letters or words.** Models do not process individual letters or even whole words. They process *tokens* — chunks of text that can be parts of words, whole words, punctuation, or short character sequences. Tokenisation is language-specific: common English words are typically single tokens, while rare words, names, and non-Latin scripts are split into multiple tokens. This is why LLMs sometimes behave strangely with letter counting, unusual proper nouns, or languages with limited training data.
+
+**Attention and context.** Rather than predicting strictly one token ahead, modern transformer-based models use *attention mechanisms* to consider the entire context window — potentially thousands of tokens — at once, weighting different parts of the context differently depending on relevance. This allows the model to "plan ahead" to some degree, maintaining coherence over long outputs. It also means that what you put at the beginning of a long prompt genuinely affects the end of the response.
+
+**Vector embeddings.** Words and tokens are converted into high-dimensional numerical vectors — *embeddings* — that capture semantic relationships. Words with similar meanings end up close together in this vector space. Operations on embeddings (famously: king − man + woman ≈ queen) reflect real semantic structure learned from the training data.
+
+These details matter for researchers because they explain specific failure modes: why an LLM can write a fluent paragraph about a topic it knows nothing about, why it cannot reliably count characters in a word, and why its outputs change between sessions even with identical prompts. For those who want to explore further, the 3Blue1Brown YouTube series on neural networks provides excellent visual explanations.
+
+## AI in the Research Lifecycle
+
+Generative AI tools are relevant at every stage of the research lifecycle, not just in writing. The data lifecycle model — Plan, Collect, Process, Analyse, Preserve, Share, Reuse — with Responsible Conduct of Research (RCR) and ethics and law at its core, provides a useful map:
+
+- **Plan**: AI can help draft data management plans, identify relevant literature for scoping reviews, and generate candidate research questions
+- **Collect**: AI tools can assist with survey design, automate preliminary screening of large document sets, and transcribe interviews or field recordings
+- **Process**: AI can assist with data cleaning descriptions, code annotation, and format conversion
+- **Analyse**: AI can explain statistical outputs, suggest visualisations, and help interpret ambiguous results — though all outputs require expert verification
+- **Preserve**: AI can generate metadata descriptions, README files, and data dictionaries
+- **Share**: AI can produce lay summaries, accessible descriptions, and translated abstracts for broader audiences
+- **Reuse**: AI can help researchers understand and adapt code or methods from other groups' published work
+
+Throughout all these stages, the course is designed around the principle that the researcher remains intellectually and ethically responsible for everything that results from their work. AI is a tool, not a co-author.
+
+## Platforms Available to Researchers
+
+Historically, querying a language model meant asking it to "continue a sentence" — a raw text completion interface. The chat interface was popularised by OpenAI with the launch of ChatGPT in late 2022, but the underlying approach builds on decades of prior work. Today, most platforms wrap LLMs in a conversational interface and require signing up to a cloud service, because running these models locally requires substantial hardware.
+
+As of early 2025, the major platforms include:
+
+| Platform | Provider | Notes |
+|----------|----------|-------|
+| ChatGPT | OpenAI | Free tier (GPT-4o mini) and paid tiers; also powers Microsoft Copilot |
+| Claude | Anthropic | Free and paid tiers (Haiku / Sonnet / Opus models) |
+| Gemini | Google | Free and paid; integrated with Google Workspace |
+| LeChat | Mistral | European provider; free and paid tiers |
+| DuckDuckGo AI | DuckDuckGo | Free, no account required, privacy-preserving |
+| Lumo | Proton | Free, GDPR-compliant, zero-access encryption, Swiss jurisdiction |
+| HuggingFace Chat | HuggingFace | Free; access to many open-source models |
+| DeepSeek | DeepSeek AI | Open-source models; web interface and local deployment |
+| Grok | xAI | Integrated with X (formerly Twitter) |
+
+**Privacy and data protection considerations** differ substantially between platforms. When privacy and data protection are important — which in research involving participants they almost always are — open-source models that can be run locally are an option that avoids sending data to external servers. The legal and institutional dimensions of choosing a platform are covered in detail in [Chapter 3](ch03-legal.qmd).
+
+::: {.callout-tip}
+## Discussion Activity
+
+1. Before this chapter, how did you think generative AI worked? Has the "next token prediction" explanation changed or confirmed your intuition?
+2. The slides from which this chapter is adapted carried a prominent disclaimer: *"This is not a computer science course."* Why do you think the instructors felt this disclaimer was important? What expectations might researchers bring to a course on AI?
+3. Looking at the research lifecycle diagram, at which stage do you think AI offers the most genuine benefit in your field? Where do you see the most risk?
+4. The slides note that different runs of the same prompt produce different outputs — "goodbye reproducibility!" How serious a problem is this for your research area? Can you think of ways to mitigate it?
+5. If you were advising a colleague who has never used any AI tool before, which platform from the table above would you recommend they try first, and why?
+:::
+
+## Practical Exercises
+
+### Exercise 1 — Experience next-token prediction directly
+**Tool**: [duck.ai](https://duck.ai) (free, private, no account required)
+
+Open duck.ai and type the beginning of a sentence related to your research field — stop mid-sentence and submit it. Read the completion. Now submit the exact same prompt two more times. Are all three completions the same? Identify one word in the completion where you can see the model made a probabilistic choice (i.e., a different word would also have made sense). This is temperature in action. Reflect: what does this tell you about using AI for tasks where you need consistent, reproducible output?
+
+### Exercise 2 — Explore the AI landscape with a comparison
+**Tool**: [arena.ai](https://arena.ai) (free, battle mode)
+
+Submit this prompt in arena battle mode: *"I am a researcher in [your field]. Give me three specific examples of how generative AI could help me in my daily work."* Vote for the response you find more relevant and specific — before seeing which models produced them. After voting, note the models. Did one model appear to have better domain knowledge? Does the winning model surprise you? Compare notes with a colleague who works in a different field.
+
+### Exercise 3 — Evaluating a privacy-first platform
+**Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant, no logging)
+
+Ask Lumo: *"Explain the difference between an AI model and an AI system in plain language, with a concrete analogy."* Compare its answer with the car engine analogy used in this chapter. Is the analogy it produces better, worse, or different? Then check Lumo's privacy page: what specific guarantees does it make about your conversation data? Write down two reasons why this might or might not matter for your research use cases.
+
+## References
+
+1. Glerean, E., & Silva, P. (2025). *AI in Research Work: Prompt engineering and advanced uses of generative AI for researchers* (lecture slides). Aalto University. CC BY. DOI: [10.5281/zenodo.14032261](https://doi.org/10.5281/zenodo.14032261)
+2. European Parliament and Council. (2024). *Regulation (EU) 2024/1689 — Artificial Intelligence Act*, Article 3(1). [eur-lex.europa.eu](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+3. Glerean, E. (2025). *Fundamentals of secure AI systems with personal data*. European Data Protection Board. [edpb.europa.eu](https://www.edpb.europa.eu)
+4. RDMkit. *The data lifecycle*. ELIXIR Europe. [rdmkit.elixir-europe.org](https://rdmkit.elixir-europe.org)
+5. Wolfram, S. (2023). *What is ChatGPT doing, and why does it work?* Wolfram Media. [writings.stephenwolfram.com](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/)
+6. 3Blue1Brown. *Neural Networks* (video series). YouTube. [youtube.com/3blue1brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+7. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. *Advances in Neural Information Processing Systems*, 30. [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)

@@ -5,8 +5,11 @@ book:
   title: "Generative AI in Research Work"
   author: "Course Instructors"
   date: today
+  repo-url: https://github.com/AaltoDataAgents/gen-ai-and-research-work
+  repo-actions: [edit, source, issue]
   chapters:
     - index.qmd
+    - ch00-intro.qmd
     - ch01-ethics.qmd
     - ch02-integrity.qmd
     - ch03-legal.qmd
@@ -17,7 +20,10 @@ book:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: [cosmo, custom-light.scss]
+      dark: [darkly, custom-dark.scss]
     toc: true
     toc-depth: 3
     number-sections: true
+    smooth-scroll: true
