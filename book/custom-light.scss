@@ -37,13 +37,13 @@ $headings-font-weight:  700;
 $headings-color:        $near-black;
 $headings-line-height:  1.15;
 
-$h1-font-size: clamp(2rem, 1.6rem + 1.5vw, 2.75rem);
-$h2-font-size: clamp(1.4rem, 1.2rem + 0.7vw, 1.75rem);
-$h3-font-size: clamp(1.1rem, 1rem + 0.3vw, 1.25rem);
-$h4-font-size: 1rem;
+$h1-font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.65rem);
+$h2-font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
+$h3-font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+$h4-font-size: 0.9rem;
 
-$font-size-base:   1.125rem;    // serif reads well slightly larger than sans
-$line-height-base: 1.85;        // slightly more generous for serif body text
+$font-size-base:   1.0625rem;   // ~17px — comfortable serif reading size
+$line-height-base: 1.72;        // compact but still readable for serif
 
 // ── ALL structural backgrounds → white ───────────────────────────────────────
 $navbar-bg:  $white;
@@ -168,12 +168,11 @@ body,
 }
 
 .sidebar-title {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: rgba($near-black, 0.4);
-  padding: 1rem 1rem 0.4rem;
+  letter-spacing: -0.01em;
+  color: rgba($near-black, 0.78);
+  padding: 1rem 1rem 0.5rem;
 }
 
 .sidebar-item .sidebar-item-text {
@@ -225,65 +224,65 @@ body,
 // ── Main content typography ───────────────────────────────────────────────────
 .quarto-title h1,
 h1.title {
-  font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem);
+  font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin-bottom: 2rem;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
   color: $near-black;
 
   &::after {
     content: '';
     display: block;
-    width: 2.5rem;
+    width: 2rem;
     height: 3px;
     background: $coral;
-    margin-top: 1rem;
+    margin-top: 0.65rem;
     border-radius: 2px;
   }
 }
 
 h2 {
-  font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.7rem);
+  font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  margin-top: 3rem;
-  margin-bottom: 0.85rem;
-  padding-bottom: 0.5rem;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
   border-bottom: 1px solid $border;
   color: $near-black;
 }
 
 h3 {
-  font-size: clamp(1.05rem, 0.95rem + 0.3vw, 1.2rem);
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
   font-weight: 700;
-  letter-spacing: -0.015em;
-  margin-top: 2.25rem;
-  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.35rem;
   color: $near-black;
 }
 
 h4 {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
   color: $coral;
-  margin-top: 1.75rem;
-  margin-bottom: 0.4rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.3rem;
 }
 
 p {
   font-size: $font-size-base;
-  line-height: 1.8;
-  margin-bottom: 1.25rem;
+  line-height: 1.72;
+  margin-bottom: 0.9rem;
   color: $near-black;
 }
 
 li {
-  line-height: 1.75;
-  margin-bottom: 0.2rem;
+  line-height: 1.65;
+  margin-bottom: 0.15rem;
 }
 
 // ── Links ─────────────────────────────────────────────────────────────────────
@@ -331,24 +330,24 @@ pre code {
   border-radius: 0.35rem;
   border-left-width: 4px;
   border-left-style: solid;
-  margin: 2rem 0;
+  margin: 1.1rem 0;
   padding: 0;
 
   .callout-header {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.07em;
-    padding: 0.75rem 1rem 0.5rem;
+    padding: 0.6rem 1rem 0.35rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
   }
 
   .callout-body {
-    font-size: 0.95rem;
-    padding: 0 1rem 0.85rem;
-    line-height: 1.7;
+    font-size: 0.9375rem;
+    padding: 0 1rem 0.7rem;
+    line-height: 1.65;
   }
 }
 
