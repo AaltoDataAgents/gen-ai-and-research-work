@@ -1,197 +1,238 @@
 /*-- scss:defaults --*/
 
-// ── Anthropic-inspired palette (bright variant, no beige) ────────────────────
-//   Anthropic exact:   text #131314, coral #d97757
-//   Our brightened:    coral #e06840, all backgrounds white
-
-$coral:       #e06840;   // brightened Anthropic coral (#d97757 → more vivid)
-$coral-light: #f5ebe5;   // very light warm tint for callout backgrounds
-$near-black:  #131314;   // Anthropic exact
-$warm-gray:   #6b6560;   // warm-toned muted text
-$white:       #ffffff;
-$warm-50:     #fdf9f6;   // barely-there warm tint — code blocks only
-$border:      #e8e0d8;   // warm, soft border (no blue)
-$link-blue:   #1a52cc;   // link color (kept readable, slightly warm)
+// ── Aalto University palette ──────────────────────────────────────────────────
+$aalto-blue:        #46A5FF;
+$aalto-red:         #FD6360;
+$aalto-yellow:      #F7E159;
+$aalto-black:       #000000;
+$aalto-white:       #FFFFFF;
+$aalto-gray-dark:   #5A5A5A;
+$aalto-gray:        #B4B4B4;
+$aalto-gray-light:  #E8E8E8;
 
 // ── Body ─────────────────────────────────────────────────────────────────────
-$body-bg:           $white;
-$body-color:        $near-black;
-$link-color:        $link-blue;
-$link-hover-color:  darken($link-blue, 12%);
+$body-bg:           $aalto-white;
+$body-color:        $aalto-black;
+$link-color:        $aalto-blue;
+$link-hover-color:  darken($aalto-blue, 12%);
 $link-decoration:   underline;
 
-// ── Typography — Anthropic-like fluid scale ───────────────────────────────────
-//   Anthropic paragraph-M: clamp(1.125rem, …, 1.25rem)
-//   We target ~1.125rem base, generous line-height
-
-// Anthropic uses TiemposText (proprietary). Closest free equivalent: Source Serif 4.
-// Plus Jakarta Sans stays for headings and all chrome (sidebar, TOC, navbar, tables).
-$font-family-sans-serif: 'Plus Jakarta Sans', 'DM Sans', system-ui, -apple-system, sans-serif;
-$font-family-serif:      'Source Serif 4', Georgia, 'Times New Roman', serif;
-$font-family-base:       $font-family-serif;   // ← body text is now serif
-$font-family-monospace:  'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+// ── Typography — Inter (Aalto.fi website font) ────────────────────────────────
+// Aalto.fi: font-family:inter,sans-serif; font-size:1.8rem(=18px); letter-spacing:.015rem
+// Root stays 16px; we express aalto's 10px-root rems as px equivalents:
+//   body 18px = 1.125rem, h1 36px = 2.25rem, h2 28px = 1.75rem,
+//   h3 21px = 1.3125rem, h4 18px = 1.125rem, nav 16px = 1rem
+$font-family-base:       'Inter', system-ui, sans-serif;
+$font-family-sans-serif: 'Inter', system-ui, sans-serif;
+$font-family-monospace:  'Fira Code', 'Consolas', monospace;
 $font-size-root:         16px;
+$font-size-base:         1.125rem;   // 18px — aalto.fi article body
+$line-height-base:       1.45;       // 26px/18px ≈ 1.44 — aalto.fi line-height:2.6rem
 
-$headings-font-family:  $font-family-sans-serif;   // headings stay sans-serif
+$headings-font-family:  'Inter', system-ui, sans-serif;
 $headings-font-weight:  700;
-$headings-color:        $near-black;
-$headings-line-height:  1.15;
+$headings-color:        $aalto-black;
+$headings-line-height:  1.2;
 
-$h1-font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.65rem);
-$h2-font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
-$h3-font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
-$h4-font-size: 0.9rem;
+// Aalto.fi heading sizes (10px-root → standard 16px-root conversion)
+$h1-font-size: 2.25rem;    // 36px — aalto h1: 3.6rem
+$h2-font-size: 1.75rem;    // 28px — aalto h2: 2.8rem
+$h3-font-size: 1.3125rem;  // 21px — aalto h3: 2.1rem
+$h4-font-size: 1.125rem;   // 18px — aalto h4: 1.8rem
 
-$font-size-base:   1.0625rem;   // ~17px — comfortable serif reading size
-$line-height-base: 1.72;        // compact but still readable for serif
+// ── Structural backgrounds ────────────────────────────────────────────────────
+$navbar-bg:  $aalto-black;
+$navbar-fg:  $aalto-white;
+$navbar-hl:  $aalto-blue;
 
-// ── ALL structural backgrounds → white ───────────────────────────────────────
-$navbar-bg:  $white;
-$navbar-fg:  $near-black;
-$navbar-hl:  $coral;
+$sidebar-bg:  $aalto-black;
+$sidebar-fg:  $aalto-white;
+$sidebar-hl:  $aalto-blue;
 
-$sidebar-bg:  $white;
-$sidebar-fg:  $near-black;
-$sidebar-hl:  $coral;
-
-$toc-color:           $warm-gray;
-$toc-active-border:   $coral;
+$toc-color:           $aalto-gray-dark;   // right-side TOC is on white bg
+$toc-active-border:   $aalto-blue;
 $toc-font-size:       0.85rem;
 
 // ── Code ─────────────────────────────────────────────────────────────────────
-$code-bg:         $warm-50;
-$code-color:      #3d2b1f;
+$code-bg:         #F5F5F5;
+$code-color:      #333333;
 $monospace-color: $code-color;
-$monospace-bg:    $warm-50;
+$monospace-bg:    #F5F5F5;
 
 // ── Borders ───────────────────────────────────────────────────────────────────
-$border-color:  $border;
+$border-color:  $aalto-gray-light;
 $border-radius: 0.25rem;
 
 // ── Bootstrap semantic ────────────────────────────────────────────────────────
-$primary:    $coral;
-$secondary:  $warm-gray;
+$primary:    $aalto-blue;
+$secondary:  $aalto-gray-dark;
 $success:    #1a9e72;
-$warning:    #c9720c;
-$danger:     #c23422;
-$info:       $link-blue;
+$warning:    $aalto-red;
+$danger:     $aalto-red;
+$info:       $aalto-blue;
 
 
 /*-- scss:rules --*/
 
-// ── Google Fonts ─────────────────────────────────────────────────────────────
-// Source Serif 4: optical-size axis (opsz) auto-optimises for body vs display
-// Plus Jakarta Sans: headings and all chrome
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+// ── Inter from Google Fonts ───────────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-// ── Sans-serif for all navigation/chrome — serif for reading text only ────────
-$sans: 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
-
-.navbar,
-.sidebar,
-.sidebar-navigation,
-.sidebar-item,
-.sidebar-item-text,
-.sidebar-title,
-#TOC,
-#TOC a,
-.toc-actions,
-.quarto-secondary-nav,
-.page-navigation,
-.nav-page,
-.nav-footer,
-.nav-footer-contents,
-.table,
-.table th,
-.table td,
-h1, h2, h3, h4, h5, h6,
-.callout-header,
-.quarto-navbar-tools,
-code, pre, kbd, samp {
-  font-family: $sans;
-}
-
-// ── Force ALL chrome to white — no blue tints anywhere ───────────────────────
-body,
+// ── Full-width layout — remove Quarto centering constraints ───────────────────
 .quarto-container,
 #quarto-content,
 .page-columns,
+.page-layout-article {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+// ── Content area white; sidebar black ────────────────────────────────────────
+body,
+.quarto-container,
+#quarto-content,
+.page-columns {
+  background-color: $aalto-white;
+}
+
+// ── Sidebar — Aalto black background ─────────────────────────────────────────
 #quarto-sidebar,
 .sidebar,
 .sidebar-navigation,
 .sidebar-menu-container,
 .quarto-sidebar-toggle-contents,
-#TOC,
-.toc-actions,
-.quarto-secondary-nav,
-.quarto-secondary-nav-content,
-.nav-footer,
-.nav-footer-contents,
-.page-navigation {
-  background-color: $white !important;
+.quarto-sidebar-collapse-item {
+  background-color: $aalto-black !important;
+  color: $aalto-white;
 }
 
-.sidebar { border-right: 1px solid $border; }
-#TOC     { border-left:  1px solid $border; }
+// Extend the floating sidebar grid column all the way to the screen left edge.
+// Without this, Quarto places the floating sidebar starting at [page-start],
+// leaving a white [screen-start → page-start] gap (1.5em + 5fr wide).
+body.floating .sidebar.sidebar-navigation {
+  grid-column: screen-start / body-start !important;
+}
 
-// ── Navbar ────────────────────────────────────────────────────────────────────
+// html background black so any sub-pixel viewport edges also stay black
+html {
+  background-color: $aalto-black;
+}
+
+// Logo in sidebar: invert to white
+.sidebar-logo-link img,
+.sidebar-header img {
+  filter: invert(1) brightness(2);
+}
+
+// No border needed — black sidebar has inherent contrast
+.sidebar { border-right: none; }
+
+// ── Navbar — also black (matches sidebar flush) ───────────────────────────────
 .navbar {
-  background-color: $white !important;
-  border-bottom: 1px solid $border;
+  background-color: $aalto-black !important;
+  border-bottom: 3px solid $aalto-blue;
   box-shadow: none;
-  min-height: 4.25rem;
+  min-height: 3.5rem;
 
   .navbar-brand {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1rem;
-    letter-spacing: -0.02em;
-    color: $near-black !important;
+    color: $aalto-white !important;
   }
 
   .navbar-nav .nav-link {
     font-size: 0.9rem;
-    font-weight: 500;
-    color: rgba($near-black, 0.75);
+    font-weight: 600;
+    color: rgba($aalto-white, 0.8);
     transition: color 0.15s;
 
     &:hover,
     &.active {
-      color: $coral !important;
+      color: $aalto-blue !important;
     }
   }
 }
 
-// ── Sidebar nav ───────────────────────────────────────────────────────────────
-.sidebar-navigation {
-  font-size: 0.875rem;
-  padding-top: 1rem;
+// ── Secondary nav (mobile breadcrumb) ────────────────────────────────────────
+.quarto-secondary-nav {
+  background-color: $aalto-black !important;
+  border-bottom: 2px solid $aalto-blue;
+  color: $aalto-white;
+
+  .quarto-secondary-nav-title {
+    color: $aalto-white;
+  }
+
+  button {
+    color: $aalto-white !important;
+  }
+}
+
+// ── Sidebar header ────────────────────────────────────────────────────────────
+.sidebar-header {
+  background-color: $aalto-black !important;
+  border-bottom: 1px solid rgba($aalto-white, 0.1);
 }
 
 .sidebar-title {
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: rgba($near-black, 0.78);
-  padding: 1rem 1rem 0.5rem;
-}
-
-.sidebar-item .sidebar-item-text {
-  color: rgba($near-black, 0.75);
-  padding: 0.2rem 0;
   font-size: 0.875rem;
-  transition: color 0.15s;
-
-  &:hover { color: $near-black; }
+  font-weight: 700;
+  color: rgba($aalto-white, 0.9) !important;
+  padding: 0.75rem 1rem 0.5rem;
+  letter-spacing: 0.01em;
 }
 
+// ── Sidebar navigation items — bold white text ────────────────────────────────
+.sidebar-navigation {
+  font-size: 0.875rem;
+  padding-top: 0.5rem;
+}
+
+.sidebar-item .sidebar-item-text,
+.sidebar-item a.sidebar-link,
+.sidebar-item a.sidebar-item-text {
+  color: rgba($aalto-white, 0.85) !important;
+  font-weight: 700 !important;
+  font-size: 0.9375rem;  // 15px — matches aalto.fi sidebar nav
+  padding: 0.3rem 1rem;
+  display: block;
+  text-decoration: none;
+  transition: color 0.15s, background-color 0.15s;
+  border-radius: 0;
+
+  &:hover {
+    color: $aalto-white !important;
+    background-color: rgba($aalto-white, 0.08) !important;
+  }
+}
+
+// Active chapter item — blue accent
 .sidebar-item-container .active > .sidebar-item-text,
-.sidebar-item-container .active .sidebar-item-text {
-  color: $coral;
-  font-weight: 600;
+.sidebar-item-container .active .sidebar-item-text,
+.sidebar-item-container .active > a.sidebar-link,
+.sidebar-item-container .active a.sidebar-link {
+  color: $aalto-blue !important;
+  background-color: rgba($aalto-blue, 0.12) !important;
+  font-weight: 700 !important;
 }
 
-// ── TOC (right panel) ─────────────────────────────────────────────────────────
+// Section dividers inside sidebar
+.sidebar-section {
+  color: rgba($aalto-white, 0.45);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1rem 1rem 0.25rem;
+}
+
+// ── TOC (right margin — in-page headings) ────────────────────────────────────
+#quarto-margin-sidebar,
+.margin-sidebar {
+  background-color: $aalto-white !important;
+}
+
 #TOC {
+  border-left: 1px solid $aalto-gray-light;
   padding: 1rem 0 1rem 1rem;
   font-size: 0.825rem;
 
@@ -199,7 +240,7 @@ body,
   ul   { padding-left: 0.85rem; }
 
   a {
-    color: rgba($near-black, 0.55);
+    color: rgba($aalto-black, 0.55);
     text-decoration: none;
     display: block;
     padding: 0.18rem 0.3rem;
@@ -207,82 +248,114 @@ body,
     margin-left: -1px;
     transition: color 0.15s, border-color 0.15s;
     line-height: 1.5;
+    font-weight: 400;
 
     &:hover {
-      color: $near-black;
-      border-left-color: $border;
+      color: $aalto-black;
+      border-left-color: $aalto-gray-light;
     }
 
     &.active {
-      color: $coral;
-      border-left-color: $coral;
-      font-weight: 600;
+      color: $aalto-blue;
+      border-left-color: $aalto-blue;
+      font-weight: 700;
     }
   }
 }
 
+// Override Quarto's high-specificity compiled Bootstrap rules for the right TOC.
+// Those selectors (e.g. .sidebar nav[role=doc-toc] ul>li>a.active) inherit
+// $toc-color which could be wrong; pin active and hover explicitly.
+#quarto-margin-sidebar nav[role=doc-toc] ul > li > a,
+#quarto-margin-sidebar nav[role=doc-toc] ul > li > ul > li > a {
+  color: rgba($aalto-black, 0.55) !important;
+}
+
+#quarto-margin-sidebar nav[role=doc-toc] ul > li > a:hover,
+#quarto-margin-sidebar nav[role=doc-toc] ul > li > ul > li > a:hover {
+  color: $aalto-black !important;
+}
+
+#quarto-margin-sidebar nav[role=doc-toc] ul > li > a.active,
+#quarto-margin-sidebar nav[role=doc-toc] ul > li > ul > li > a.active {
+  color: $aalto-blue !important;
+  font-weight: 700;
+}
+
 // ── Main content typography ───────────────────────────────────────────────────
+.nav-footer,
+.nav-footer-contents,
+.page-navigation {
+  background-color: $aalto-white !important;
+}
+
+// Aalto.fi: h1=36px bold lh1.2, h2=28px bold lh1.2, h3=21px bold lh1.2,
+//           h4=18px bold, body=18px lh1.45 letter-spacing:.015rem
 .quarto-title h1,
 h1.title {
-  font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-  margin-bottom: 1.25rem;
-  color: $near-black;
+  font-size: 2.25rem;      // 36px
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-bottom: 1rem;
+  color: $aalto-black;
 
   &::after {
     content: '';
     display: block;
     width: 2rem;
     height: 3px;
-    background: $coral;
-    margin-top: 0.65rem;
+    background: $aalto-blue;
+    margin-top: 0.75rem;
     border-radius: 2px;
   }
 }
 
 h2 {
-  font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
+  font-size: 1.75rem;      // 28px
   font-weight: 700;
-  letter-spacing: -0.015em;
-  line-height: 1.25;
-  margin-top: 2rem;
-  margin-bottom: 0.6rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
   padding-bottom: 0.4rem;
-  border-bottom: 1px solid $border;
-  color: $near-black;
+  border-bottom: 1px solid $aalto-gray-light;
+  color: $aalto-black;
 }
 
 h3 {
-  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+  font-size: 1.3125rem;    // 21px
   font-weight: 700;
-  letter-spacing: -0.01em;
-  margin-top: 1.5rem;
-  margin-bottom: 0.35rem;
-  color: $near-black;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: $aalto-black;
 }
 
 h4 {
-  font-size: 0.8rem;
+  font-size: 1.125rem;     // 18px — same as body, distinguished by color + weight
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: $coral;
-  margin-top: 1.25rem;
-  margin-bottom: 0.3rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: $aalto-blue;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 p {
-  font-size: $font-size-base;
-  line-height: 1.72;
-  margin-bottom: 0.9rem;
-  color: $near-black;
+  font-size: $font-size-base;   // 1.125rem = 18px
+  line-height: $line-height-base;
+  letter-spacing: 0.015rem;     // aalto.fi letter-spacing: .015rem
+  margin-bottom: 1rem;
+  color: $aalto-black;
 }
 
 li {
-  line-height: 1.65;
-  margin-bottom: 0.15rem;
+  font-size: $font-size-base;
+  line-height: 1.8;              // aalto.fi list line-height: 1.8rem (ratio ≈ 1.8/1.8 = 1)
+  letter-spacing: 0.015rem;
+  margin-bottom: 0.25rem;        // aalto.fi li margin-bottom: 0.25rem
 }
 
 // ── Links ─────────────────────────────────────────────────────────────────────
@@ -292,6 +365,7 @@ a {
   transition: color 0.15s;
 
   &:hover {
+    text-decoration: underline;
     text-decoration-thickness: 0.12em;
   }
 }
@@ -299,8 +373,8 @@ a {
 // ── Code ─────────────────────────────────────────────────────────────────────
 pre.sourceCode,
 pre {
-  background: $warm-50 !important;
-  border: 1px solid $border;
+  background: #F5F5F5 !important;
+  border: 1px solid $aalto-gray-light;
   border-radius: 0.35rem;
   padding: 1.1rem 1.4rem;
   font-size: 0.85rem;
@@ -310,12 +384,12 @@ pre {
 }
 
 code {
-  background: $warm-50;
-  color: darken($coral, 8%);
+  background: #F5F5F5;
+  color: darken($aalto-blue, 20%);
   padding: 0.12em 0.38em;
   border-radius: 0.2rem;
   font-size: 0.86em;
-  border: 1px solid $border;
+  border: 1px solid $aalto-gray-light;
 }
 
 pre code {
@@ -325,7 +399,7 @@ pre code {
   color: $code-color;
 }
 
-// ── Callouts — Anthropic warm palette ────────────────────────────────────────
+// ── Callouts ─────────────────────────────────────────────────────────────────
 .callout {
   border-radius: 0.35rem;
   border-left-width: 4px;
@@ -351,35 +425,30 @@ pre code {
   }
 }
 
-// note → warm indigo (Learning Outcomes)
 .callout.callout-style-default.callout-note {
-  border-left-color: #4a6fa5 !important;
-  background-color: #f0f4fa !important;
-  .callout-header { color: #2d4e82; }
+  border-left-color: $aalto-blue !important;
+  background-color: #EBF5FF !important;
+  .callout-header { color: darken($aalto-blue, 15%); }
 }
 
-// tip → warm teal-green (Discussion Activity)
 .callout.callout-style-default.callout-tip {
   border-left-color: #1a9e72 !important;
   background-color: #f0faf6 !important;
   .callout-header { color: #136b4d; }
 }
 
-// warning → coral (Draft notice)
 .callout.callout-style-default.callout-warning {
-  border-left-color: $coral !important;
-  background-color: mix($coral-light, $white, 60%) !important;
-  .callout-header { color: darken($coral, 8%); }
+  border-left-color: $aalto-red !important;
+  background-color: #FFF0EF !important;
+  .callout-header { color: darken($aalto-red, 10%); }
 }
 
-// important → warm red
 .callout.callout-style-default.callout-important {
-  border-left-color: #c23422 !important;
-  background-color: #fef2f0 !important;
-  .callout-header { color: #9e2519; }
+  border-left-color: $aalto-red !important;
+  background-color: #FFF0EF !important;
+  .callout-header { color: darken($aalto-red, 10%); }
 }
 
-// caution → warm amber
 .callout.callout-style-default.callout-caution {
   border-left-color: #c9720c !important;
   background-color: #fef8f0 !important;
@@ -389,28 +458,28 @@ pre code {
 // ── Tables ────────────────────────────────────────────────────────────────────
 .table {
   font-size: 0.9375rem;
-  border-color: $border;
+  border-color: $aalto-gray-light;
 
   thead th {
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: rgba($near-black, 0.5);
-    border-bottom: 1.5px solid $border;
-    background-color: $warm-50;
+    color: rgba($aalto-black, 0.5);
+    border-bottom: 1.5px solid $aalto-gray-light;
+    background-color: $aalto-gray-light;
     padding: 0.6rem 0.9rem;
   }
 
   td {
     padding: 0.55rem 0.9rem;
-    border-color: $border;
+    border-color: $aalto-gray-light;
     vertical-align: top;
     line-height: 1.6;
   }
 
   tbody tr:hover {
-    background-color: mix($coral, $white, 4%);
+    background-color: mix($aalto-blue, $aalto-white, 5%);
   }
 }
 
@@ -418,63 +487,73 @@ pre code {
 .page-navigation {
   margin-top: 3.5rem;
   padding-top: 2rem;
-  border-top: 1px solid $border;
+  border-top: 1px solid $aalto-gray-light;
 }
 
 .nav-page {
-  background-color: $white !important;
+  background-color: $aalto-white !important;
 }
 
 .page-navigation a.nav-page {
-  border: 1px solid $border;
+  border: 1px solid $aalto-gray-light;
   border-radius: 0.35rem;
   padding: 0.85rem 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
-  color: $near-black;
+  color: $aalto-black;
   transition: border-color 0.2s, background-color 0.2s, color 0.2s;
-  background-color: $white;
+  background-color: $aalto-white;
 
   &:hover {
-    border-color: $coral;
-    background-color: mix($coral, $white, 5%);
-    color: $coral;
+    border-color: $aalto-blue;
+    background-color: mix($aalto-blue, $aalto-white, 5%);
+    color: $aalto-blue;
   }
 }
 
 // ── Footer ───────────────────────────────────────────────────────────────────
 .nav-footer {
-  background-color: $white !important;
-  border-top: 1px solid $border;
+  background-color: $aalto-white !important;
+  border-top: 1px solid $aalto-gray-light;
   font-size: 0.82rem;
-  color: rgba($near-black, 0.5);
+  color: rgba($aalto-black, 0.5);
   padding: 1rem 0;
 }
 
-// ── Toolbar (dark mode toggle, GitHub) ───────────────────────────────────────
+// ── Toolbar icons (dark mode toggle, GitHub) — navbar and sidebar ─────────────
 .quarto-navbar-tools,
 .quarto-navbar-tools a,
-.quarto-navbar-tools .quarto-navigation-tool {
-  color: rgba($near-black, 0.6) !important;
+.quarto-navbar-tools .quarto-navigation-tool,
+.sidebar-tools-main a,
+.sidebar-tools-main .quarto-navigation-tool {
+  color: rgba($aalto-white, 0.7) !important;
   font-size: 1rem;
   transition: color 0.15s;
 
-  &:hover { color: $coral !important; }
+  &:hover { color: $aalto-blue !important; }
 }
 
-// ── Secondary nav (mobile breadcrumb) ────────────────────────────────────────
-.quarto-secondary-nav {
-  background-color: $white !important;
-  border-bottom: 1px solid $border;
-  color: $near-black;
+// The sidebar toggle is a baked-in SVG background-image with a dark fill —
+// override both states with a white-fill version so it's visible on black bg.
+.sidebar-navigation .quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgba(255,255,255,0.75)" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>') !important;
+}
+
+.sidebar-navigation .quarto-color-scheme-toggle.alternate .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgba(255,255,255,0.75)" class="bi bi-toggle-on" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>') !important;
+}
+
+// ── Chapter numbers in sidebar — must be light on black background ─────────────
+#quarto-sidebar .chapter-number {
+  color: rgba($aalto-white, 0.4);
 }
 
 // ── Scrollbar ─────────────────────────────────────────────────────────────────
 ::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: $white; }
+::-webkit-scrollbar-track { background: $aalto-gray-light; }
 ::-webkit-scrollbar-thumb {
-  background: $border;
+  background: $aalto-gray;
   border-radius: 3px;
-  &:hover { background: rgba($near-black, 0.25); }
+  &:hover { background: $aalto-gray-dark; }
 }

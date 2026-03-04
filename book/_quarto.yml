@@ -3,7 +3,9 @@ project:
 
 book:
   title: "Generative AI in Research Work"
-  author: "Course Instructors"
+  author: "Enrico Glerean, Pedro Silva"
+  sidebar:
+    logo: aalto-logo-black.png
   date: today
   repo-url: https://github.com/AaltoDataAgents/gen-ai-and-research-work
   repo-actions: [edit, source, issue]
