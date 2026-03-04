@@ -3,7 +3,7 @@
 ::: {.callout-warning}
 ## Draft — Not Yet Reviewed
 
-This book was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+This has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
 :::
 
 This book is a practical  guide for researchers who want to understand and use generative AI tools responsibly and effectively in their work. It covers the ethical, legal, and technical dimensions of AI, as well as hands-on guidance for prompting, evaluating outputs, and working with multimodal systems. Each chapter builds toward a grounded, critical approach to integrating AI into the research lifecycle.
