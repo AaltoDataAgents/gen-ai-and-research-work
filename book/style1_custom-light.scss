@@ -1,0 +1,480 @@
+/*-- scss:defaults --*/
+
+// ── Anthropic-inspired palette (bright variant, no beige) ────────────────────
+//   Anthropic exact:   text #131314, coral #d97757
+//   Our brightened:    coral #e06840, all backgrounds white
+
+$coral:       #e06840;   // brightened Anthropic coral (#d97757 → more vivid)
+$coral-light: #f5ebe5;   // very light warm tint for callout backgrounds
+$near-black:  #131314;   // Anthropic exact
+$warm-gray:   #6b6560;   // warm-toned muted text
+$white:       #ffffff;
+$warm-50:     #fdf9f6;   // barely-there warm tint — code blocks only
+$border:      #e8e0d8;   // warm, soft border (no blue)
+$link-blue:   #1a52cc;   // link color (kept readable, slightly warm)
+
+// ── Body ─────────────────────────────────────────────────────────────────────
+$body-bg:           $white;
+$body-color:        $near-black;
+$link-color:        $link-blue;
+$link-hover-color:  darken($link-blue, 12%);
+$link-decoration:   underline;
+
+// ── Typography — Anthropic-like fluid scale ───────────────────────────────────
+//   Anthropic paragraph-M: clamp(1.125rem, …, 1.25rem)
+//   We target ~1.125rem base, generous line-height
+
+// Anthropic uses TiemposText (proprietary). Closest free equivalent: Source Serif 4.
+// Plus Jakarta Sans stays for headings and all chrome (sidebar, TOC, navbar, tables).
+$font-family-sans-serif: 'Plus Jakarta Sans', 'DM Sans', system-ui, -apple-system, sans-serif;
+$font-family-serif:      'Source Serif 4', Georgia, 'Times New Roman', serif;
+$font-family-base:       $font-family-serif;   // ← body text is now serif
+$font-family-monospace:  'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+$font-size-root:         16px;
+
+$headings-font-family:  $font-family-sans-serif;   // headings stay sans-serif
+$headings-font-weight:  700;
+$headings-color:        $near-black;
+$headings-line-height:  1.15;
+
+$h1-font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.65rem);
+$h2-font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
+$h3-font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+$h4-font-size: 0.9rem;
+
+$font-size-base:   1.0625rem;   // ~17px — comfortable serif reading size
+$line-height-base: 1.72;        // compact but still readable for serif
+
+// ── ALL structural backgrounds → white ───────────────────────────────────────
+$navbar-bg:  $white;
+$navbar-fg:  $near-black;
+$navbar-hl:  $coral;
+
+$sidebar-bg:  $white;
+$sidebar-fg:  $near-black;
+$sidebar-hl:  $coral;
+
+$toc-color:           $warm-gray;
+$toc-active-border:   $coral;
+$toc-font-size:       0.85rem;
+
+// ── Code ─────────────────────────────────────────────────────────────────────
+$code-bg:         $warm-50;
+$code-color:      #3d2b1f;
+$monospace-color: $code-color;
+$monospace-bg:    $warm-50;
+
+// ── Borders ───────────────────────────────────────────────────────────────────
+$border-color:  $border;
+$border-radius: 0.25rem;
+
+// ── Bootstrap semantic ────────────────────────────────────────────────────────
+$primary:    $coral;
+$secondary:  $warm-gray;
+$success:    #1a9e72;
+$warning:    #c9720c;
+$danger:     #c23422;
+$info:       $link-blue;
+
+
+/*-- scss:rules --*/
+
+// ── Google Fonts ─────────────────────────────────────────────────────────────
+// Source Serif 4: optical-size axis (opsz) auto-optimises for body vs display
+// Plus Jakarta Sans: headings and all chrome
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ── Sans-serif for all navigation/chrome — serif for reading text only ────────
+$sans: 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
+
+.navbar,
+.sidebar,
+.sidebar-navigation,
+.sidebar-item,
+.sidebar-item-text,
+.sidebar-title,
+#TOC,
+#TOC a,
+.toc-actions,
+.quarto-secondary-nav,
+.page-navigation,
+.nav-page,
+.nav-footer,
+.nav-footer-contents,
+.table,
+.table th,
+.table td,
+h1, h2, h3, h4, h5, h6,
+.callout-header,
+.quarto-navbar-tools,
+code, pre, kbd, samp {
+  font-family: $sans;
+}
+
+// ── Force ALL chrome to white — no blue tints anywhere ───────────────────────
+body,
+.quarto-container,
+#quarto-content,
+.page-columns,
+#quarto-sidebar,
+.sidebar,
+.sidebar-navigation,
+.sidebar-menu-container,
+.quarto-sidebar-toggle-contents,
+#TOC,
+.toc-actions,
+.quarto-secondary-nav,
+.quarto-secondary-nav-content,
+.nav-footer,
+.nav-footer-contents,
+.page-navigation {
+  background-color: $white !important;
+}
+
+.sidebar { border-right: 1px solid $border; }
+#TOC     { border-left:  1px solid $border; }
+
+// ── Navbar ────────────────────────────────────────────────────────────────────
+.navbar {
+  background-color: $white !important;
+  border-bottom: 1px solid $border;
+  box-shadow: none;
+  min-height: 4.25rem;
+
+  .navbar-brand {
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: -0.02em;
+    color: $near-black !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba($near-black, 0.75);
+    transition: color 0.15s;
+
+    &:hover,
+    &.active {
+      color: $coral !important;
+    }
+  }
+}
+
+// ── Sidebar nav ───────────────────────────────────────────────────────────────
+.sidebar-navigation {
+  font-size: 0.875rem;
+  padding-top: 1rem;
+}
+
+.sidebar-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: rgba($near-black, 0.78);
+  padding: 1rem 1rem 0.5rem;
+}
+
+.sidebar-item .sidebar-item-text {
+  color: rgba($near-black, 0.75);
+  padding: 0.2rem 0;
+  font-size: 0.875rem;
+  transition: color 0.15s;
+
+  &:hover { color: $near-black; }
+}
+
+.sidebar-item-container .active > .sidebar-item-text,
+.sidebar-item-container .active .sidebar-item-text {
+  color: $coral;
+  font-weight: 600;
+}
+
+// ── TOC (right panel) ─────────────────────────────────────────────────────────
+#TOC {
+  padding: 1rem 0 1rem 1rem;
+  font-size: 0.825rem;
+
+  > ul { padding-left: 0; }
+  ul   { padding-left: 0.85rem; }
+
+  a {
+    color: rgba($near-black, 0.55);
+    text-decoration: none;
+    display: block;
+    padding: 0.18rem 0.3rem;
+    border-left: 2px solid transparent;
+    margin-left: -1px;
+    transition: color 0.15s, border-color 0.15s;
+    line-height: 1.5;
+
+    &:hover {
+      color: $near-black;
+      border-left-color: $border;
+    }
+
+    &.active {
+      color: $coral;
+      border-left-color: $coral;
+      font-weight: 600;
+    }
+  }
+}
+
+// ── Main content typography ───────────────────────────────────────────────────
+.quarto-title h1,
+h1.title {
+  font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  color: $near-black;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 3px;
+    background: $coral;
+    margin-top: 0.65rem;
+    border-radius: 2px;
+  }
+}
+
+h2 {
+  font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid $border;
+  color: $near-black;
+}
+
+h3 {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.35rem;
+  color: $near-black;
+}
+
+h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: $coral;
+  margin-top: 1.25rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  font-size: $font-size-base;
+  line-height: 1.72;
+  margin-bottom: 0.9rem;
+  color: $near-black;
+}
+
+li {
+  line-height: 1.65;
+  margin-bottom: 0.15rem;
+}
+
+// ── Links ─────────────────────────────────────────────────────────────────────
+a {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.06em;
+  transition: color 0.15s;
+
+  &:hover {
+    text-decoration-thickness: 0.12em;
+  }
+}
+
+// ── Code ─────────────────────────────────────────────────────────────────────
+pre.sourceCode,
+pre {
+  background: $warm-50 !important;
+  border: 1px solid $border;
+  border-radius: 0.35rem;
+  padding: 1.1rem 1.4rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  box-shadow: none;
+  color: $code-color;
+}
+
+code {
+  background: $warm-50;
+  color: darken($coral, 8%);
+  padding: 0.12em 0.38em;
+  border-radius: 0.2rem;
+  font-size: 0.86em;
+  border: 1px solid $border;
+}
+
+pre code {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: $code-color;
+}
+
+// ── Callouts — Anthropic warm palette ────────────────────────────────────────
+.callout {
+  border-radius: 0.35rem;
+  border-left-width: 4px;
+  border-left-style: solid;
+  margin: 1.1rem 0;
+  padding: 0;
+
+  .callout-header {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 0.6rem 1rem 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .callout-body {
+    font-size: 0.9375rem;
+    padding: 0 1rem 0.7rem;
+    line-height: 1.65;
+  }
+}
+
+// note → warm indigo (Learning Outcomes)
+.callout.callout-style-default.callout-note {
+  border-left-color: #4a6fa5 !important;
+  background-color: #f0f4fa !important;
+  .callout-header { color: #2d4e82; }
+}
+
+// tip → warm teal-green (Discussion Activity)
+.callout.callout-style-default.callout-tip {
+  border-left-color: #1a9e72 !important;
+  background-color: #f0faf6 !important;
+  .callout-header { color: #136b4d; }
+}
+
+// warning → coral (Draft notice)
+.callout.callout-style-default.callout-warning {
+  border-left-color: $coral !important;
+  background-color: mix($coral-light, $white, 60%) !important;
+  .callout-header { color: darken($coral, 8%); }
+}
+
+// important → warm red
+.callout.callout-style-default.callout-important {
+  border-left-color: #c23422 !important;
+  background-color: #fef2f0 !important;
+  .callout-header { color: #9e2519; }
+}
+
+// caution → warm amber
+.callout.callout-style-default.callout-caution {
+  border-left-color: #c9720c !important;
+  background-color: #fef8f0 !important;
+  .callout-header { color: #9e5808; }
+}
+
+// ── Tables ────────────────────────────────────────────────────────────────────
+.table {
+  font-size: 0.9375rem;
+  border-color: $border;
+
+  thead th {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba($near-black, 0.5);
+    border-bottom: 1.5px solid $border;
+    background-color: $warm-50;
+    padding: 0.6rem 0.9rem;
+  }
+
+  td {
+    padding: 0.55rem 0.9rem;
+    border-color: $border;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  tbody tr:hover {
+    background-color: mix($coral, $white, 4%);
+  }
+}
+
+// ── Prev / Next navigation ────────────────────────────────────────────────────
+.page-navigation {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border;
+}
+
+.nav-page {
+  background-color: $white !important;
+}
+
+.page-navigation a.nav-page {
+  border: 1px solid $border;
+  border-radius: 0.35rem;
+  padding: 0.85rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: $near-black;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+  background-color: $white;
+
+  &:hover {
+    border-color: $coral;
+    background-color: mix($coral, $white, 5%);
+    color: $coral;
+  }
+}
+
+// ── Footer ───────────────────────────────────────────────────────────────────
+.nav-footer {
+  background-color: $white !important;
+  border-top: 1px solid $border;
+  font-size: 0.82rem;
+  color: rgba($near-black, 0.5);
+  padding: 1rem 0;
+}
+
+// ── Toolbar (dark mode toggle, GitHub) ───────────────────────────────────────
+.quarto-navbar-tools,
+.quarto-navbar-tools a,
+.quarto-navbar-tools .quarto-navigation-tool {
+  color: rgba($near-black, 0.6) !important;
+  font-size: 1rem;
+  transition: color 0.15s;
+
+  &:hover { color: $coral !important; }
+}
+
+// ── Secondary nav (mobile breadcrumb) ────────────────────────────────────────
+.quarto-secondary-nav {
+  background-color: $white !important;
+  border-bottom: 1px solid $border;
+  color: $near-black;
+}
+
+// ── Scrollbar ─────────────────────────────────────────────────────────────────
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: $white; }
+::-webkit-scrollbar-thumb {
+  background: $border;
+  border-radius: 3px;
+  &:hover { background: rgba($near-black, 0.25); }
+}

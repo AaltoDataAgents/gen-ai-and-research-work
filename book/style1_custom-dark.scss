@@ -1,0 +1,463 @@
+/*-- scss:defaults --*/
+
+// ── Dark palette — deep navy with warm coral accents ─────────────────────────
+$coral-dark:   #ff7a4a;   // brighter coral for dark backgrounds
+$near-white:   #ece8e3;   // warm off-white text (not cold blue-white)
+$bg-base:      #151210;   // very dark warm-tinted background
+$bg-surface:   #1e1a16;   // slightly lighter surface (cards, navbar)
+$bg-code:      #1a1714;   // code blocks
+$border-dark:  #332e28;   // warm dark border
+$muted-dark:   #8a8078;   // warm muted text
+$link-soft:    #7db3f5;   // readable blue in dark
+
+// ── Body ─────────────────────────────────────────────────────────────────────
+$body-bg:           $bg-base;
+$body-color:        $near-white;
+$link-color:        $link-soft;
+$link-hover-color:  lighten($link-soft, 12%);
+$link-decoration:   underline;
+
+// ── Typography ───────────────────────────────────────────────────────────────
+$font-family-sans-serif: 'Plus Jakarta Sans', 'DM Sans', system-ui, -apple-system, sans-serif;
+$font-family-serif:      'Source Serif 4', Georgia, 'Times New Roman', serif;
+$font-family-base:       $font-family-serif;   // ← body text is serif
+$font-family-monospace:  'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+$font-size-root:         16px;
+
+$headings-font-family:  $font-family-sans-serif;
+$headings-font-weight:  700;
+$headings-color:        $near-white;
+$headings-line-height:  1.15;
+
+$h1-font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.65rem);
+$h2-font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
+$h3-font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+$h4-font-size: 0.9rem;
+
+$font-size-base:   1.0625rem;
+$line-height-base: 1.72;
+
+// ── ALL structural backgrounds consistent ─────────────────────────────────────
+$navbar-bg:  $bg-surface;
+$navbar-fg:  $near-white;
+$navbar-hl:  $coral-dark;
+
+$sidebar-bg:  $bg-base;
+$sidebar-fg:  $near-white;
+$sidebar-hl:  $coral-dark;
+
+$toc-color:           $muted-dark;
+$toc-active-border:   $coral-dark;
+$toc-font-size:       0.85rem;
+
+// ── Code ─────────────────────────────────────────────────────────────────────
+$code-bg:         $bg-code;
+$code-color:      #c8bdb5;
+$monospace-color: $code-color;
+$monospace-bg:    $bg-code;
+
+// ── Borders ───────────────────────────────────────────────────────────────────
+$border-color:  $border-dark;
+$border-radius: 0.25rem;
+
+// ── Bootstrap semantic ────────────────────────────────────────────────────────
+$primary:    $coral-dark;
+$secondary:  $muted-dark;
+$success:    #4ade80;
+$warning:    #fbbf24;
+$danger:     #f87171;
+$info:       $link-soft;
+
+
+/*-- scss:rules --*/
+
+// ── Google Fonts ─────────────────────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ── Sans-serif for all navigation/chrome — serif for reading text only ────────
+$sans: 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
+
+.navbar,
+.sidebar,
+.sidebar-navigation,
+.sidebar-item,
+.sidebar-item-text,
+.sidebar-title,
+#TOC,
+#TOC a,
+.toc-actions,
+.quarto-secondary-nav,
+.page-navigation,
+.nav-page,
+.nav-footer,
+.nav-footer-contents,
+.table,
+.table th,
+.table td,
+h1, h2, h3, h4, h5, h6,
+.callout-header,
+.quarto-navbar-tools,
+code, pre, kbd, samp {
+  font-family: $sans;
+}
+
+// ── Force consistent dark chrome — no background mismatches ──────────────────
+body,
+.quarto-container,
+#quarto-content,
+.page-columns,
+#quarto-sidebar,
+.sidebar,
+.sidebar-navigation,
+.sidebar-menu-container,
+.quarto-sidebar-toggle-contents {
+  background-color: $bg-base !important;
+}
+
+#TOC,
+.toc-actions,
+.quarto-secondary-nav-content,
+.nav-footer,
+.nav-footer-contents,
+.nav-page {
+  background-color: $bg-surface !important;
+}
+
+.sidebar { border-right: 1px solid $border-dark; }
+#TOC     { border-left:  1px solid $border-dark; }
+
+// ── Navbar ────────────────────────────────────────────────────────────────────
+.navbar {
+  background-color: $bg-surface !important;
+  border-bottom: 1px solid $border-dark;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  min-height: 4.25rem;
+
+  .navbar-brand {
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: -0.02em;
+    color: $near-white !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba($near-white, 0.7);
+    transition: color 0.15s;
+
+    &:hover,
+    &.active {
+      color: $coral-dark !important;
+    }
+  }
+}
+
+// ── Sidebar nav ───────────────────────────────────────────────────────────────
+.sidebar-navigation {
+  font-size: 0.875rem;
+  padding-top: 1rem;
+}
+
+.sidebar-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: rgba($near-white, 0.78);
+  padding: 1rem 1rem 0.5rem;
+}
+
+.sidebar-item .sidebar-item-text {
+  color: rgba($near-white, 0.65);
+  padding: 0.2rem 0;
+  font-size: 0.875rem;
+  transition: color 0.15s;
+
+  &:hover { color: $near-white; }
+}
+
+.sidebar-item-container .active > .sidebar-item-text,
+.sidebar-item-container .active .sidebar-item-text {
+  color: $coral-dark;
+  font-weight: 600;
+}
+
+// ── TOC ───────────────────────────────────────────────────────────────────────
+#TOC {
+  padding: 1rem 0 1rem 1rem;
+  font-size: 0.825rem;
+
+  > ul { padding-left: 0; }
+  ul   { padding-left: 0.85rem; }
+
+  a {
+    color: rgba($near-white, 0.45);
+    text-decoration: none;
+    display: block;
+    padding: 0.18rem 0.3rem;
+    border-left: 2px solid transparent;
+    margin-left: -1px;
+    transition: color 0.15s, border-color 0.15s;
+    line-height: 1.5;
+
+    &:hover {
+      color: $near-white;
+      border-left-color: $border-dark;
+    }
+
+    &.active {
+      color: $coral-dark;
+      border-left-color: $coral-dark;
+      font-weight: 600;
+    }
+  }
+}
+
+// ── Main content typography ───────────────────────────────────────────────────
+.quarto-title h1,
+h1.title {
+  font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  color: $near-white;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 3px;
+    background: $coral-dark;
+    margin-top: 0.65rem;
+    border-radius: 2px;
+  }
+}
+
+h2 {
+  font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid $border-dark;
+  color: $near-white;
+}
+
+h3 {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.35rem;
+  color: darken($near-white, 10%);
+}
+
+h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: $coral-dark;
+  margin-top: 1.25rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  font-size: $font-size-base;
+  line-height: 1.72;
+  margin-bottom: 0.9rem;
+  color: rgba($near-white, 0.88);
+}
+
+li {
+  line-height: 1.65;
+  margin-bottom: 0.15rem;
+  color: rgba($near-white, 0.85);
+}
+
+// ── Links ─────────────────────────────────────────────────────────────────────
+a {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.06em;
+  transition: color 0.15s;
+
+  &:hover { text-decoration-thickness: 0.12em; }
+}
+
+// ── Code ─────────────────────────────────────────────────────────────────────
+pre.sourceCode,
+pre {
+  background: $bg-code !important;
+  border: 1px solid $border-dark;
+  border-radius: 0.35rem;
+  padding: 1.1rem 1.4rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: $code-color;
+}
+
+code {
+  background: $bg-code;
+  color: lighten($coral-dark, 10%);
+  padding: 0.12em 0.38em;
+  border-radius: 0.2rem;
+  font-size: 0.86em;
+  border: 1px solid $border-dark;
+}
+
+pre code {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: $code-color;
+}
+
+// ── Callouts — warm dark variants ────────────────────────────────────────────
+.callout {
+  border-radius: 0.35rem;
+  border-left-width: 4px;
+  border-left-style: solid;
+  margin: 1.1rem 0;
+  padding: 0;
+
+  .callout-header {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 0.6rem 1rem 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .callout-body {
+    font-size: 0.9375rem;
+    padding: 0 1rem 0.7rem;
+    line-height: 1.65;
+    color: rgba($near-white, 0.85);
+  }
+}
+
+.callout.callout-style-default.callout-note {
+  border-left-color: #7db3f5 !important;
+  background-color: rgba(#7db3f5, 0.08) !important;
+  .callout-header { color: #7db3f5; }
+}
+
+.callout.callout-style-default.callout-tip {
+  border-left-color: #4ade80 !important;
+  background-color: rgba(#4ade80, 0.07) !important;
+  .callout-header { color: #4ade80; }
+}
+
+.callout.callout-style-default.callout-warning {
+  border-left-color: $coral-dark !important;
+  background-color: rgba($coral-dark, 0.1) !important;
+  .callout-header { color: $coral-dark; }
+}
+
+.callout.callout-style-default.callout-important {
+  border-left-color: #f87171 !important;
+  background-color: rgba(#f87171, 0.08) !important;
+  .callout-header { color: #f87171; }
+}
+
+.callout.callout-style-default.callout-caution {
+  border-left-color: #fbbf24 !important;
+  background-color: rgba(#fbbf24, 0.07) !important;
+  .callout-header { color: #fbbf24; }
+}
+
+// ── Tables ────────────────────────────────────────────────────────────────────
+.table {
+  font-size: 0.9375rem;
+  color: $near-white;
+  border-color: $border-dark;
+
+  thead th {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba($near-white, 0.45);
+    border-bottom: 1.5px solid $border-dark;
+    background-color: $bg-surface;
+    padding: 0.6rem 0.9rem;
+  }
+
+  td {
+    padding: 0.55rem 0.9rem;
+    border-color: $border-dark;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  tbody tr:hover {
+    background-color: rgba($coral-dark, 0.05);
+  }
+}
+
+// ── Prev / Next navigation ────────────────────────────────────────────────────
+.page-navigation {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border-dark;
+}
+
+.page-navigation a.nav-page {
+  border: 1px solid $border-dark;
+  border-radius: 0.35rem;
+  padding: 0.85rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: $near-white;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+  background-color: $bg-surface;
+
+  &:hover {
+    border-color: $coral-dark;
+    background-color: rgba($coral-dark, 0.08);
+    color: $coral-dark;
+  }
+}
+
+// ── Footer ───────────────────────────────────────────────────────────────────
+.nav-footer {
+  background-color: $bg-surface !important;
+  border-top: 1px solid $border-dark;
+  font-size: 0.82rem;
+  color: rgba($near-white, 0.4);
+  padding: 1rem 0;
+}
+
+// ── Toolbar ───────────────────────────────────────────────────────────────────
+.quarto-navbar-tools,
+.quarto-navbar-tools a,
+.quarto-navbar-tools .quarto-navigation-tool {
+  color: rgba($near-white, 0.55) !important;
+  font-size: 1rem;
+  transition: color 0.15s;
+
+  &:hover { color: $coral-dark !important; }
+}
+
+// ── Secondary nav ─────────────────────────────────────────────────────────────
+.quarto-secondary-nav {
+  background-color: $bg-surface !important;
+  border-bottom: 1px solid $border-dark;
+  color: $near-white;
+}
+
+// ── Scrollbar ─────────────────────────────────────────────────────────────────
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: $bg-base; }
+::-webkit-scrollbar-thumb {
+  background: $border-dark;
+  border-radius: 3px;
+  &:hover { background: $muted-dark; }
+}
