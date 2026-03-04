@@ -5,64 +5,170 @@ title: "Research Integrity, Authorship & Policies"
 ::: {.callout-warning}
 ## Draft — Not Yet Reviewed
 
-This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+The content in this chapter is being reviewed since Claude Code was used to convert the text from powerpoint slides to this webpage. Content may be incomplete, inaccurate, or require significant editing before use.
 :::
 
-The rise of generative AI has prompted rapid changes to the norms and policies governing academic authorship, publication, and funding. This chapter examines what research integrity means in an AI-assisted environment, surveys the evolving landscape of journal and funder policies, and helps researchers understand their responsibilities around attribution and disclosure.
+The rise of generative AI has prompted rapid changes to the norms and policies governing academic authorship, publication, and research conduct. This chapter examines what research integrity means in an AI-assisted environment, surveys the obligations set out in the major codes of conduct, and helps researchers understand their responsibilities around disclosure, authorship, and the limits of responsible AI use.
 
 ::: {.callout-note}
 ## Learning Outcomes
 
 By the end of this chapter you will be able to:
 
-- Define research integrity and explain how AI use intersects with its core principles
-- Describe current authorship norms and why AI tools cannot qualify as authors
-- Identify the AI disclosure requirements of major funders (e.g., EU Horizon, NIH) and publishers
-- Develop a disclosure statement for AI use in a manuscript or grant application
-- Recognise practices that could constitute misconduct when AI is involved
+- Explain the key principles of the ALLEA European Code of Conduct for Research Integrity and the Finnish Code of Conduct for Research Integrity
+- Distinguish between plagiarism (a research integrity violation) and intellectual property rights infringement (a legal violation), and explain why this distinction matters for AI use
+- Identify the full range of research integrity violations and questionable research practices, including those specific to AI
+- Describe the role-differentiated responsibilities that developers and researchers bear with respect to AI
+- Explain why generative AI systems present novel risks for fabrication, falsification, and plagiarism
+- Apply current authorship norms to determine when and how AI use must be disclosed
 :::
 
-## Research Integrity and AI
+## The Codes of Research Integrity
 
-- Core principles: honesty, rigour, transparency, accountability
-- How AI use can inadvertently undermine integrity (fabricated citations, unverified claims)
-- The distinction between using AI as a tool and delegating intellectual responsibility
-- Documentation practices that protect integrity
+Research integrity in Europe is governed primarily by two documents: the **ALLEA European Code of Conduct for Research Integrity** (2023) and, in Finland, the **Finnish Code of Conduct for Research Integrity** (2023). Although distinct in their jurisdiction, both codes articulate a shared understanding of what honest, reliable, and accountable research practice requires.
+
+The ALLEA Code identifies four core principles that underpin research integrity:
+
+- **Reliability** — in ensuring the quality of research, reflected in the design, methodology, analysis, and use of resources
+- **Honesty** — in developing, undertaking, reviewing, reporting, and communicating research in a transparent, fair, full, and unbiased way
+- **Respect** — for colleagues, research participants, society, ecosystems, cultural heritage, and the environment
+- **Accountability** — for the research from its conception to its publication, for its management and organisation, for training and supervision, and for its broader impacts
+
+These four pillars define the standard against which researchers' conduct is measured. Together, they describe not just what researchers must do, but what they must *be*: honest agents whose work can be trusted by the institutions and publics that rely on it.
+
+## Plagiarism, Intellectual Property, and the Ethics–Law Distinction
+
+A particularly important distinction from the ALLEA Code is the difference between **plagiarism** and **intellectual property rights (IPR) infringement**. These two concepts are often confused, but they fall under different regulatory and ethical regimes:
+
+- **Plagiarism** — the unacknowledged use of another person's work — is a violation of *research ethics*. It is a matter of honesty: presenting someone else's ideas, text, or results as your own without attribution is fundamentally dishonest, regardless of whether any legal copyright is involved.
+- **IPR infringement** — the unauthorised use of another person's work — is a violation of *law*. Copyright, licensing terms, and intellectual property rights are legal constructs, and their breach is treated as a legal matter rather than (only) an ethical one.
+
+This distinction becomes particularly relevant with generative AI. Large language models are trained on vast corpora of text and can reproduce that text — sometimes verbatim — without citing or acknowledging the original sources. When a researcher uses AI-generated text that reproduces copyrighted material without attribution, they may simultaneously be violating both research integrity (plagiarism) and intellectual property law (IPR infringement). Understanding this dual exposure is essential for anyone incorporating AI outputs into their work.
+
+## Violations of Research Integrity
+
+Research misconduct and questionable research practices (QRPs) take many forms, ranging from the gravest deliberate falsification to more ambiguous failures of transparency. The most serious violations are:
+
+- **Fabrication** — inventing data, results, or other outputs that do not exist
+- **Falsification** — manipulating research materials, equipment, data, or results so that the research record misrepresents reality
+- **Plagiarism** — presenting another person's work, ideas, or text as one's own, without appropriate acknowledgement
+
+Beyond these cardinal violations, the ALLEA Code also identifies a range of questionable research practices that, while less clear-cut, are nonetheless unacceptable in professional research:
+
+- Undisclosed conflicts of interest
+- Misusing seniority to encourage violations or to advance one's own career
+- Delaying or hampering the work of others — for example, by acting as a malicious peer reviewer
+- Misusing statistics (selective reporting, inappropriate tests, inflated effect sizes)
+- **Hiding the use of AI in the research process**
+- Withholding data or results without justification
+- Chopping up results artificially to inflate publication count (*salami slicing*)
+- Selective or inaccurate citing; expanding citations to please editors, reviewers, or colleagues
+- Self-plagiarism
+- Manipulating authorship — guest authorship and ghost authorship
+- Establishing or supporting predatory journals and reviewer cartels
+- Misrepresenting achievements (*CV inflation*)
+- Falsely accusing others of misconduct
+- Ignoring research integrity violations when they are observed
+
+The explicit inclusion of **hiding AI use** in this list is significant. It reflects an emerging consensus that transparency about AI assistance is not merely good practice, but a requirement of research integrity — as binding as the prohibition on hiding data manipulations or omitting relevant citations.
+
+## Different Roles, Different Responsibilities
+
+Generative AI does not affect all participants in the research ecosystem equally. The ALLEA Code's framework of responsibilities applies differently depending on whether one is a **developer** of AI systems or a **researcher and educator** who uses them.
+
+![Icons representing the different roles in the AI research ecosystem: developer, researcher, student, and teacher (slide imagery from Glerean & Silva, 2025)](images/ch02/slide137_Graphic_12.png){fig-alt="Illustration of a teacher at a whiteboard with students, representing the academic context in which AI tools are adopted" width=120}
+
+### Developers of AI Systems
+
+Those who build AI systems bear a different set of obligations:
+
+- **Ethics**: AI ethics and responsible AI principles must be considered throughout the entire AI system lifecycle — covering Sustainability, Safety, Accountability, Fairness, Explainability, and Data Stewardship (the SSAFE-D framework described in Chapter 1)
+- **Law**: Compliance with the EU AI Act applies when the system poses risks and is not developed solely for research purposes or personal use; GDPR and other data regulations also apply throughout the development pipeline
+- **Technical robustness**: Developers are responsible for ensuring the correct functioning of the AI system. Crucially, large AI models are computationally demanding and cannot run locally — they are hosted in the cloud, meaning users are always operating on someone else's infrastructure, with all the data sovereignty implications that entails
+
+### Researchers, Teachers, and Students
+
+Those who use AI in research and education bear a complementary set of obligations, expressed through the Truth–Trust–Competence–Compliance framework:
+
+- **Truth**: The quality of research and education, as reflected in design, methodology, analysis, and use of resources, must not be compromised by AI-generated errors, hallucinations, or unverified claims
+- **Trust**: Work must be conducted in a transparent, fair, full, and unbiased way; undisclosed AI assistance undermines the trust that peers, institutions, and the public place in research
+- **Competence**: Researchers must preserve and develop their own skills, judgement, and expertise — AI tools that substitute for rather than augment human critical thinking erode competence over time
+- **Compliance**: Adherence to legal, ethical, and institutional standards remains the researcher's responsibility, regardless of what an AI tool does or recommends
+
+This role-differentiated view of responsibility is important because it resists two opposite errors: holding individual researchers solely accountable for the ethical failures of AI systems they did not design, while also refusing to allow researchers to evade responsibility simply because "the AI did it".
+
+## Generative AI as a Misconduct Machine
+
+A striking feature of current generative AI systems is that their technical design aligns almost perfectly with the conditions for research misconduct. Large language models are trained to produce fluent, confident-sounding text and are optimised to satisfy users — *not* to be accurate, not to cite sources, and not to acknowledge uncertainty. As a result:
+
+- **Plagiarism risk**: Generative AI language models can reproduce text from their training data verbatim without citing the original source. A researcher who uses this output without verification may unknowingly plagiarise published work.
+- **Fabrication and falsification risk**: AI tools can be used for data synthesis and data analysis — and they can be used, willingly or not, to fabricate data or falsify results. The now-famous question "how many *r*s are in strawberry?" illustrates that AI systems fail on tasks where precise factual accuracy is required, yet present their errors with the same confident tone as correct outputs. In data analysis contexts, this poses serious risks.
+- **Security and data protection risks**: Uploading sensitive research data, confidential participant information, or unpublished manuscripts to cloud-based AI systems exposes them to data protection risks. The confidentiality and integrity of your data, your subjects' data, and your intellectual property must be protected.
+
+Aalto University's guidelines on the *Responsible Use of Artificial Intelligence in the Research Process* address these risks directly and should be consulted before using any AI tool in a research context.
+
+## Disclosure Obligations and the Transparency Dilemma
+
+Because the ALLEA Code explicitly lists hiding AI use as a research integrity violation, researchers must disclose their AI use — but the question of *how* and *where* to draw the line is genuinely difficult.
+
+Several concrete questions illustrate the complexity:
+
+**Where is the line between acceptable use and required disclosure?** The publisher Elsevier provides a useful example: using AI for spell-checking, grammar correction, and punctuation does not require disclosure. Any other use — including restructuring sentences, summarising literature, drafting sections, or generating code — does require disclosure.
+
+**Should you trust AI-generated citations and summaries?** Research suggests that large language models are approximately five times more likely to overgeneralise and misinterpret scientific literature than a human researcher working from the original sources. AI-generated citation lists should never be used without verification against the original sources.
+
+**Should AI-generated code be trusted?** AI tools can generate code that is syntactically correct but logically flawed, and that introduces security vulnerabilities. Cybersecurity risks of AI-generated code are an active concern in software engineering research.
+
+**Should AI be used for peer review?** In some fields, studies have found that up to 17% of peer reviews show evidence of AI involvement. The practice is controversial and raises serious concerns about confidentiality and the integrity of the review process.
+
+**What about AI detection tools?** Studies suggest that approximately 9% of researchers self-report using AI in their writing, while detection estimates suggest the actual figure may be closer to 36%. AI detectors are unreliable and raise questions about fairness. Paradoxically, research has also found that researchers who *do* disclose AI use are trusted *less* by readers — an uncomfortable finding that suggests transparency norms may take time to stabilise.
+
+## The Verification Imperative
+
+A clear guiding principle emerges from these considerations:
+
+> *If you do not have the ability or the resources to verify the output of a generative AI system — by finding the relevant citations for the synthesised text, by verifying that others' work is summarised correctly, by detecting plagiarised text or code, by verifying the analysis code — then you should not use the output of that AI system beyond self-learning or brainstorming.*
+
+This principle places the burden of verification firmly on the researcher. AI tools do not verify themselves. They do not know what they do not know. The researcher is the last line of quality control, and that role cannot be delegated to the tool.
 
 ## Authorship Norms and AI
 
-- ICMJE criteria and why AI does not meet them
-- Who bears accountability for AI-generated content in a publication
-- Ghost-writing concerns and the author's duty to verify all content
-- Emerging consensus across disciplines
+Across major publishers and funding bodies, a clear consensus has emerged: **AI cannot be listed as an author on a scientific paper**.
 
-## Journal and Publisher Policies
+The rationale is straightforward. Authorship in academic publishing carries legal and ethical responsibility — for the accuracy of the work, for the integrity of the data, for responses to post-publication corrections, and for potential misconduct investigations. AI systems cannot bear responsibility in any of these senses: they cannot be held accountable, they cannot sign declarations of originality, and they cannot respond to correspondence. Authorship requires accountability; AI cannot provide it.
 
-- Overview of policies from major publishers (Elsevier, Springer Nature, Wiley, PLOS)
-- Variation across fields and journals — why you must always check
-- Required disclosure language and where to include it
-- Consequences of non-disclosure
+This position is stated explicitly by Aalto University, by *Nature*, and by Elsevier, among others.
 
-## Funder Requirements
+What AI use *does* require is transparency. Elsevier's guidelines, which serve as a useful reference point across the sector, specify that:
 
-- EU Horizon Europe: open science and AI transparency expectations
-- NIH: data sharing and responsible AI in funded research
-- National and institutional funders: variation and how to stay current
-- Integrating compliance into grant writing and project planning
+- Using AI for grammar, spelling, and punctuation checking does not require declaration
+- Any other use — including drafting text, summarising literature, generating code, or producing figures — must be declared in a dedicated section of the manuscript
+- AI-generated images should not appear in publications unless they are directly relevant to the research design or methodology being reported
 
-## Attribution and Credit
+The expectation of reproducibility also applies: describing how AI was used in the research process is necessary so that others can understand and, where relevant, reproduce your methods.
 
-- Citing AI tools: emerging standards and why it matters
-- Distinguishing AI-assisted work from wholly original contributions
-- Attribution in collaborative and interdisciplinary projects
+## The Ethics Paradox and Responsible Use
+
+A provocative but intellectually honest position on current generative AI tools can be stated as follows:
+
+> *It is impossible to ethically use these tools, because they are not ethical under any aspect.*
+
+This is not a frivolous claim. As demonstrated in Chapter 1, major proprietary AI systems currently fail all six dimensions of the SSAFE-D responsible AI framework. Their training data is opaque, their environmental costs are substantial, their developers face no meaningful regulatory accountability, and there is substantial evidence of bias and copyright infringement in their development.
+
+If one accepts the strictest ethical standards, the conclusion follows: one should not use or promote these tools.
+
+Yet the real world poses a series of ethical compromises that most people navigate every day. We drive petrol-powered cars knowing their environmental costs. We consume products made in conditions that exploit labour. We use smartphones manufactured under supply chains that harm ecosystems. Our taxes fund institutions that cause harm. This does not make those choices right — but it does reflect the reality that individuals operate within imperfect systems not of their own making.
+
+The constructive response is not paralysis but **responsibility**: by using AI tools with a clear understanding of their limitations, their costs, and the conditions under which they generate unreliable or harmful outputs, researchers can identify use cases where they add genuine value to their work, to the people they interact with, and to society at large — while refusing to use them in contexts where the risks outweigh the benefits, and advocating for the systemic changes that would make ethical AI possible.
 
 ::: {.callout-tip}
 ## Discussion Activity
 
-1. If you used an AI tool to help write a section of a paper and then substantially edited it, how would you disclose this? Does the level of editing change your answer?
-2. A colleague argues that disclosing AI use will disadvantage their paper in peer review. How would you respond?
-3. How should research integrity policies keep pace with rapidly evolving AI capabilities? Who should be responsible for updating them?
-4. What would you do if you discovered that a co-author had used AI to generate results without disclosing it?
+1. The ALLEA Code lists hiding AI use as a research integrity violation. Yet research also shows that disclosing AI use reduces readers' trust in the researcher. How should individuals navigate this tension? Does transparency always serve research integrity?
+2. Apply the Truth–Trust–Competence–Compliance framework to a specific AI use case from your field. Which of the four dimensions raises the most concern, and why?
+3. Elsevier distinguishes between spell-checking (no disclosure required) and all other AI use (disclosure required). Is this a sensible line? Can you think of edge cases where the distinction breaks down?
+4. The "verification imperative" places full responsibility for checking AI outputs on the researcher. Is this a realistic standard given the volume of text AI can generate? What institutional or technical supports would make this more feasible?
+5. The chapter argues that it is "impossible to ethically use" current AI tools, yet concludes that responsible use is still possible. Is this position coherent? How does it compare with other ethical compromises researchers make in their everyday practice?
 :::
 
 ## Practical Exercises
@@ -77,15 +183,20 @@ Imagine you used an AI tool to help draft the Discussion section of a paper, the
 
 In battle mode, submit: *"Should an AI tool be listed as an author on a scientific paper? Justify your answer with reference to established authorship criteria."* Vote for the response that best reflects current academic consensus. Then look up the ICMJE recommendations and COPE guidelines on AI authorship (both freely available online). Did the models cite them correctly? Did either model hallucinate policy details?
 
-### Exercise 3 — Verifying funder policy claims
+### Exercise 3 — Applying the verification imperative
 **Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant)
 
-Ask Lumo to summarise the EU Horizon Europe policy on AI use in funded research. Identify one specific claim in its response. Then go to the official EU Horizon Europe programme guide (freely available at ec.europa.eu) and verify that claim. Is the AI's summary accurate? What are the risks of relying on AI to interpret compliance requirements?
+Ask Lumo to summarise three recent studies on a topic in your own research area. For each study it mentions, attempt to locate the original source. How many can you verify? How many appear to be hallucinated or misattributed? Reflect on what this exercise tells you about the conditions under which AI-generated literature summaries can and cannot be trusted.
 
 ## References
 
-1. Cornell University. *Generative AI in Academic Research: Perspectives and Cultural Norms*. Cornell Research & Innovation. Freely downloadable PDF. [research.cornell.edu](https://research.cornell.edu)
-2. Stanford University HAI. (2025). *Generative AI policies at top universities: October 2025 update*. [hai.stanford.edu](https://hai.stanford.edu)
-3. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
-4. COPE (Committee on Publication Ethics). (2023). *Authorship and AI tools*. COPE position statement. [publicationethics.org](https://publicationethics.org/cope-position-statements/ai-author)
-5. ICMJE. (2024). *Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals*. [icmje.org](https://www.icmje.org/recommendations)
+1. ALLEA. (2023). *The European Code of Conduct for Research Integrity* (Revised ed.). ALLEA. [allea.org](https://allea.org/code-of-conduct/)
+2. Finnish National Board on Research Integrity TENK. (2023). *The Finnish Code of Conduct for Research Integrity*. [tenk.fi](https://www.tenk.fi)
+3. Glerean, E., & Silva, P. (2025). *Generative AI in Research Work — Course slides*. Zenodo. [doi.org/10.5281/zenodo.14032261](https://doi.org/10.5281/zenodo.14032261) (CC-BY)
+4. Aalto University. *Responsible use of Artificial Intelligence in the research process*. [aalto.fi](https://www.aalto.fi/en/services/responsible-use-of-artificial-intelligence-in-the-research-process)
+5. COPE (Committee on Publication Ethics). (2023). *Authorship and AI tools*. COPE position statement. [publicationethics.org](https://publicationethics.org/cope-position-statements/ai-author)
+6. ICMJE. (2024). *Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals*. [icmje.org](https://www.icmje.org/recommendations)
+7. Elsevier. *The use of AI and AI-assisted technologies in writing for Elsevier*. [elsevier.com](https://www.elsevier.com/about/policies-and-standards/the-use-of-ai-and-ai-assisted-writing-technologies-in-scientific-writing)
+8. Nature. *Artificial intelligence (AI) policy for Nature Portfolio journals*. [nature.com](https://www.nature.com/nature-portfolio/editorial-policies/ai)
+9. Liang, W., et al. (2024). Mapping the increasing use of LLMs in scientific papers. *arXiv*. [arxiv.org/abs/2404.01268](https://arxiv.org/abs/2404.01268)
+10. Altmäe, S., et al. (2023). Artificial intelligence in scientific writing: a friend or a foe? *Reproductive BioMedicine Online*, 47(1), 3–9. [doi.org/10.1016/j.rbmo.2023.04.009](https://doi.org/10.1016/j.rbmo.2023.04.009)

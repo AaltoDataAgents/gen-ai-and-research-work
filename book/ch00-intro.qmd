@@ -5,7 +5,7 @@ title: "Introduction: What is Generative AI?"
 ::: {.callout-warning}
 ## Draft — Not Yet Reviewed
 
-This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+The content in this chapter is being reviewed since Claude Code was used to convert the text from powerpoint slides to this webpage. Content may be incomplete, inaccurate, or require significant editing before use.
 :::
 
 Generative AI tools are now part of the everyday landscape of academic research, yet many researchers use them without a clear picture of what they actually are, how they differ from other software, or why they behave the way they do. This chapter provides an accessible, non-technical introduction to artificial intelligence — from its broad definition down to the specific class of systems behind tools like ChatGPT, Claude, and Gemini — so that everything that follows in this course rests on a solid conceptual foundation. No prior knowledge of computer science or mathematics is assumed.

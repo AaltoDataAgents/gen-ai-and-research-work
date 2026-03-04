@@ -5,7 +5,7 @@ title: "Multimodal AI for Research"
 ::: {.callout-warning}
 ## Draft — Not Yet Reviewed
 
-This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+The content in this chapter is being reviewed since Claude Code was used to convert the text from powerpoint slides to this webpage. Content may be incomplete, inaccurate, or require significant editing before use.
 :::
 
 Generative AI has moved well beyond text. Researchers now have access to tools that can generate, analyse, and transform images, audio, and video — opening new possibilities for research communication, data collection, and analysis. This chapter surveys the multimodal AI landscape and equips researchers to use these tools with the same critical awareness applied to text-based systems.

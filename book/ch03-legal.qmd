@@ -5,7 +5,7 @@ title: "Legal, Data Protection & Compliance"
 ::: {.callout-warning}
 ## Draft — Not Yet Reviewed
 
-This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+The content in this chapter is being reviewed since Claude Code was used to convert the text from powerpoint slides to this webpage. Content may be incomplete, inaccurate, or require significant editing before use.
 :::
 
 Using generative AI in research is not only an ethical and integrity matter — it also has legal dimensions that researchers must navigate carefully. This chapter covers the key legal frameworks affecting AI use in research, including data protection law, intellectual property, and institutional compliance requirements.

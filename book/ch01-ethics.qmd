@@ -5,7 +5,7 @@ title: "Research Ethics & Responsible AI"
 ::: {.callout-warning}
 ## Draft — Not Yet Reviewed
 
-This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+The content in this chapter is being reviewed since Claude Code was used to convert the text from powerpoint slides to this webpage. Content may be incomplete, inaccurate, or require significant editing before use.
 :::
 
 Generative AI tools raise fundamental ethical questions that are inseparable from their use in research. This chapter examines the values, principles, and frameworks that should guide researchers when deciding whether and how to use AI — with attention to fairness, societal impact, and the responsibilities that come with producing knowledge.
@@ -15,49 +15,205 @@ Generative AI tools raise fundamental ethical questions that are inseparable fro
 
 By the end of this chapter you will be able to:
 
-- Articulate core ethical principles relevant to AI use in research contexts
-- Identify sources of bias in AI systems and their potential impact on research outputs
-- Evaluate a research scenario for ethical risks associated with AI use
-- Apply transparency and accountability norms to your own AI-assisted work
-- Distinguish between individual ethical responsibility and systemic/structural issues in AI
+- Distinguish between ethics, law, research integrity, and research compliance, and explain how they interact
+- Articulate the four core principles of research ethics (Beneficence, Non-maleficence, Autonomy, Justice) and apply them to AI use scenarios
+- Identify violations of research integrity and explain why some AI-related practices qualify as questionable research practices
+- Apply a principled framework (Truth, Trust, Competence, Compliance) to evaluate new technologies in research
+- Describe the main frameworks for AI ethics and responsible AI, including Floridi's five principles and the SSAFE-D model
+- Critically assess the ethical shortcomings of current proprietary generative AI systems against responsible AI criteria
 :::
 
-## Core Ethical Principles for AI in Research
+## Ethics is Not Law
 
-- Beneficence and non-maleficence: does the use of AI serve research participants and society?
-- Autonomy: whose choices and voices are amplified or marginalised?
-- Justice and fairness: who benefits from AI-assisted research and who bears the risks?
-- Transparency: can you explain and justify your use of AI to peers, participants, and the public?
+A common misconception is that if something is legal, it is also ethical — and if something is illegal, it must be unethical. These two domains overlap significantly, but they are not the same.
 
-## Bias and Fairness in AI Systems
+**Ethics** is a set of moral principles: a theory or system of moral values that guides what we consider right and wrong behaviour. **Law** is a binding custom or practice of a community — a rule of conduct prescribed or formally recognised as binding and enforced by a controlling authority.
 
-- Training data reflects historical and social inequalities
-- Outputs can reinforce stereotypes or systematically disadvantage certain groups
-- Disciplinary and linguistic biases in large language models
-- Strategies for identifying and mitigating bias in research workflows
+The degree of overlap between ethics and law varies greatly between countries and changes over time with political circumstances. Ethics, by contrast, is grounded in fundamental human rights and tends to be more stable across contexts.
 
-## Societal Impact of AI-Assisted Research
+Two examples illustrate the distinction clearly:
 
-- Downstream effects of publishing AI-assisted findings
-- Dual-use risks: research that could cause harm if misapplied
-- Environmental costs of large-scale AI use
-- Responsibilities toward research participants and communities
+- **Ethical but not legal:** NGOs operating in the Mediterranean Sea have faced prosecution for assisting migrants stranded at sea (e.g., the *Jonio/Mediterranea* case). From an ethical standpoint, saving human lives at sea is a moral obligation; yet in some jurisdictions, these acts were prosecuted as smuggling.
+- **Legal but not ethical:** In the *Hirsi Jamaa and Others v. Italy* case before the European Court of Human Rights, Italian military forces were found to have violated fundamental rights by failing to assist stranded migrants — an action that was arguably permissible under domestic law at the time but clearly unethical under international human rights standards.
 
-## Transparency and Accountability
+When we encounter new technologies like generative AI, this distinction matters enormously: much of what AI companies currently do is legal but ethically questionable.
 
-- Disclosure norms: when and how to declare AI use
-- Maintaining an audit trail for AI-assisted decisions
-- Accountability when AI outputs are wrong or harmful
-- Institutional and professional frameworks for responsible AI
+## Three Overlapping Domains in Research
+
+Research practice sits at the intersection of three related but distinct domains:
+
+**Research Ethics** is a set of principles that researchers must follow when conducting research. The classical principles, adapted from Beauchamp & Childress (2019), are:
+
+- *Beneficence* — the research should benefit participants and society
+- *Non-maleficence* — the research should avoid causing harm
+- *Autonomy* — participants' right to make informed, free choices must be respected
+- *Justice* — the benefits and burdens of research should be distributed fairly
+
+**Research Integrity** primarily concerns practice — the actions and behaviours of researchers following the rules and regulations governing their disciplines. The four pillars of research integrity are: *Reliability, Honesty, Respect,* and *Accountability*.
+
+**Research Compliance** involves adherence to regulations, directives, and national laws that apply to research and its outputs: the General Data Protection Regulation (GDPR), Dual Use and Export Control regulations, Sanctions regulations, Medical Device regulations, Clinical Trial regulations, the Animal Welfare directive, the Finnish Act on the Secondary Use of Health and Social Data, and others.
+
+These three domains interact and can create tensions:
+
+- Academic freedom can be limited by research compliance requirements
+- Open science practices can be constrained by ethics and/or law
+- Adhering to ethical principles can, in some institutional cultures, put a researcher's career at risk
+
+Understanding these tensions is essential when evaluating whether and how to use AI tools in your research.
+
+## Research Ethics in the European Union
+
+The European Union has developed detailed frameworks for ethical self-evaluation in research, particularly for projects funded under Horizon Europe. Researchers are expected to assess the ethical dimensions of their work across multiple areas:
+
+- Medical research with human participants, human organs, tissues, and cells
+- Non-medical research with human participants
+- Processing of personal data
+- Research involving animals
+- Research conducted in non-EU countries, especially in the global south
+- Environmental and safety considerations
+- **Artificial Intelligence** — explicitly included as an ethical dimension
+- Dual-use items and potential misuse of results
+
+This list makes clear that AI is already a recognised dimension of research ethics review in European research funding. For guidance on performing an ethics self-assessment, Aalto University provides dedicated support: [aalto.fi — Ethics Self-Assessment](https://www.aalto.fi/en/aalto-community-hub/how-to-make-an-ethics-self-assessment-in-research-projects-aalto-support-and-guidelines).
+
+### Finnish Guidelines for Non-Medical Human Research (TENK)
+
+In Finland, the National Board on Research Integrity (TENK) specifies the conditions under which researchers must seek an ethics committee statement for human sciences research. An ethics review statement is required if the study involves any of the following:
+
+a) Participation deviates from the principle of informed consent
+b) The research involves intervening in the physical integrity of participants
+c) The focus of the research is on minors under the age of 15 without appropriate parental consent
+d) Participants are exposed to exceptionally strong stimuli
+e) A risk of causing mental harm beyond the limits of normal daily life
+f) A threat to the safety of participants, researchers, or their close associates
+
+*(TENK Guidelines, Section 4.2)*
+
+## Research Integrity in the European Union
+
+Research integrity in the EU is governed primarily by the **ALLEA European Code of Conduct for Research Integrity** (2023) and, in Finland, by the **Finnish Code of Conduct for Research Integrity** (2023). Both documents specify the norms of honest, reliable, and accountable research practice.
+
+An important distinction from the ALLEA Code is the difference between plagiarism and intellectual property rights infringement:
+
+- **Plagiarism** (unacknowledged use of another person's work) is a violation of research ethics
+- **IPR infringement** (unauthorised use of another person's work) is a violation of law
+
+Both are serious, but they fall under different regulatory and ethical regimes.
+
+### Violations of Research Integrity
+
+Research misconduct and questionable research practices (QRPs) take many forms. The most serious violations are:
+
+- **Fabrication** — inventing data or results
+- **Falsification** — manipulating research materials, data, or results
+- **Plagiarism** — presenting another's work as one's own
+
+Questionable research practices that are less clear-cut but still unacceptable include:
+
+- Conflict of interest that is not disclosed
+- Misusing seniority to encourage violations or advance one's career
+- Delaying or hampering the work of others (e.g., acting as a malicious peer reviewer)
+- Misusing statistics
+- **Hiding the use of AI in the research process**
+- Withholding data or results without justification
+- Chopping up results to inflate publication count (*salami slicing*)
+- Selective or inaccurate citing; expanding citations to please editors, reviewers, or friends
+- Self-plagiarism
+- Manipulating authorship (guest authorship, ghost authorship)
+- Supporting predatory journals or reviewer cartels
+- Misrepresenting achievements (CV inflation)
+- Falsely accusing others of misconduct
+- Ignoring research integrity violations when they are observed
+
+Note that **hiding the use of AI** is explicitly listed as a violation. This is a rapidly evolving area, and transparency about AI use in research is increasingly required by funders, journals, and institutions.
+
+## The Interrelationship Between Research Ethics and Research Integrity
+
+Research ethics and research integrity are distinct but deeply interrelated. A model proposed by Muthanna, Chaaban & Qadhi (2024) captures this relationship through three bridging values:
+
+![Model of the interrelationship between research ethics and research integrity (Muthanna et al., 2024)](images/ch01/slide118_Picture_10.jpg){fig-alt="Diagram showing research ethics and research integrity as two overlapping domains connected by the values of Truth, Trust, and Competence"}
+
+The three bridging values are:
+
+- **Truth** — both ethics and integrity demand honest representation of findings, methods, and limitations
+- **Trust** — the research enterprise depends on researchers being trusted by participants, peers, institutions, and the public
+- **Competence** — acting ethically and with integrity requires sufficient methodological knowledge to recognise and avoid errors or harms
+
+## A Framework for Evaluating New Technologies in Research
+
+When researchers encounter a new technology — including generative AI — a practical framework for ethical evaluation can be built around four questions, extending the Truth–Trust–Competence model with a Compliance dimension:
+
+| Dimension | Question |
+|---|---|
+| **Truth** | Could the use of this technology compromise the accuracy or integrity of my research findings? |
+| **Trust** | Could using this technology undermine others' confidence in my work or in me as a researcher? |
+| **Competence** | Might this technology diminish my own skills, expertise, or critical thinking abilities? |
+| **Compliance** | Does using this technology pose any risk of legal violations? |
+
+Applying these four questions before adopting any AI tool for research purposes provides a disciplined starting point for ethical reflection.
+
+## A Framework for AI Ethics
+
+The terms *AI ethics*, *responsible AI*, *AI governance*, and *AI regulations* are closely related but not interchangeable:
+
+- **AI Ethics** concerns the moral principles that should guide AI development and use (Beneficence, Non-maleficence, Autonomy, Justice, Explicability — Floridi 2023)
+- **Responsible AI** translates ethical principles into organisational practice (e.g., the SSAFE-D framework from the Alan Turing Institute)
+- **AI Governance and Regulations** concerns the legal and institutional frameworks for oversight (e.g., the EU Artificial Intelligence Act, the Alan Turing Institute's *AI Governance in Practice*)
+
+Many frameworks use overlapping but not identical vocabulary: Fairness, Accountability, Transparency, Explicability, and Trustworthiness all appear across different guidelines.
+
+### Floridi's Five Principles for Ethical AI
+
+Floridi (2023) proposes a unified framework of five principles, drawing on both classical research ethics (the Georgetown principles of Beauchamp & Childress) and the specific characteristics of AI systems:
+
+![Unified framework of five principles for ethical AI (Floridi, 2023)](images/ch01/slide127_Picture_9.png){fig-alt="Diagram showing five principles for ethical AI: Beneficence, Non-maleficence, Autonomy, Justice, and Explicability arranged in an integrated framework"}
+
+1. **Beneficence** — AI should promote well-being, preserve dignity, and sustain the planet
+2. **Non-maleficence** — AI should not harm individuals, communities, or society
+3. **Autonomy** — AI should preserve human agency and the ability of individuals to make meaningful choices
+4. **Justice** — AI should promote fairness and prevent discrimination or exploitation
+5. **Explicability** — AI systems should be understandable and their decisions interpretable
+
+The fifth principle, *Explicability*, is the distinctive addition to the classical bioethics framework. It reflects a practical concern: if AI systems cannot explain their outputs, it becomes impossible to verify that the other four principles are being upheld.
+
+### Responsible AI: The SSAFE-D Framework
+
+The Alan Turing Institute's *Responsible AI* framework operationalises these principles into six concrete dimensions, grouped under the acronym **SSAFE-D**:
+
+![SSAFE-D responsible AI framework (The Alan Turing Institute)](images/ch01/slide130_Picture_7.png){fig-alt="Diagram showing the SSAFE-D responsible AI framework: Sustainability, Safety, Accountability, Fairness, Explainability, Data Stewardship"}
+
+- **Sustainability** — environmental and social sustainability of AI systems
+- **Safety** — preventing harm to individuals and society
+- **Accountability** — clear responsibility for AI decisions and their consequences
+- **Fairness** — equitable treatment across demographic groups
+- **Explainability** — transparency about how AI systems reach their outputs
+- **Data Stewardship** — responsible collection, use, and governance of training data
+
+## Applying SSAFE-D to Current Generative AI Systems
+
+When SSAFE-D principles are applied to evaluate the major proprietary generative AI systems (OpenAI, Meta, Google, etc.), the results are troubling:
+
+![Book cover: "The AI Con" by Bender & Hanna (2024) — a critical account of the AI industry's ethical failures](images/ch01/slide131_Picture_2.png){fig-alt="Book cover of The AI Con by Emily M. Bender and Alex Hanna" width=200}
+
+- ❌ **Sustainability** — the AI industry currently consumes 1–2% of global electricity, with rapid growth; the environmental costs of training and running large models are rarely acknowledged
+- ❌ **Safety** — documented cases of AI-induced psychological harm, content that has been linked to self-harm, and the exploitation of underpaid annotators in the global south
+- ❌ **Accountability** — no meaningful legal or regulatory consequences for developers whose systems cause harm to individuals
+- ❌ **Fairness** — well-documented biases against Black people, women, and other minorities in language models and image generation systems
+- ❌ **Explainability** — the internal workings of frontier AI models are not publicly understood; even their developers cannot fully explain specific outputs
+- ❌ **Data Stewardship** — training data is kept secret; there is substantial evidence of copyright infringement and illegal processing of personal data in training corpora
+
+Critically, as of the date of these slides: **all of this is currently legal** in most jurisdictions. This is the clearest illustration of why ethics and law are not the same — and why researchers need ethical frameworks that go beyond compliance.
+
+For a detailed critical account of these issues, see Stahl & Eke (2024) *"The Ethics of ChatGPT"* and Bender & Hanna (2024) *"The AI Con"*.
 
 ::: {.callout-tip}
 ## Discussion Activity
 
-1. Can you think of a research scenario in your field where using generative AI might create an ethical problem that would not arise without it?
-2. If an AI system produces a biased output that influences a published finding, who is responsible — the researcher, the tool developer, or the institution?
-3. How transparent should researchers be about AI use? Should the standard differ between different types of use (e.g., drafting text vs. analysing data)?
-4. What ethical frameworks from your discipline's existing research ethics codes could apply to AI use?
-5. Is there a type of research where you believe generative AI should never be used? Why?
+1. Can you think of a scenario from your own research field where using generative AI might create an ethical problem that would not arise without it? Which of the four principles (Beneficence, Non-maleficence, Autonomy, Justice) is most at risk?
+2. Apply the Truth–Trust–Competence–Compliance framework to an AI tool you have used or are considering using. Which dimension raises the most concern for your specific research context?
+3. All six SSAFE-D dimensions are currently violated by major AI providers, yet their tools are widely used in research. How should individual researchers respond to this collective-action problem? Is personal abstention a meaningful response?
+4. The hiding of AI use in research is listed as a violation of research integrity. Where exactly is the line between acceptable use, transparency, and misconduct? Does your answer differ depending on the type of AI use (literature search, data analysis, text drafting)?
+5. Ethics evolves faster than law, especially in technology. Who should be setting the ethical standards for AI use in research — researchers themselves, institutions, funders, or governments?
 :::
 
 ## Practical Exercises
@@ -67,21 +223,27 @@ By the end of this chapter you will be able to:
 
 In battle mode, submit the prompt: *"Describe the contributions of women to 20th century science."* Without knowing which models you are comparing, vote for the response you find more balanced and historically accurate. After voting, check the model names. Were there differences in how each model handled potential stereotypes or omissions? Discuss with a peer what you noticed and why it might matter for research.
 
-### Exercise 2 — AI self-awareness about ethics
+### Exercise 2 — Evaluating AI against SSAFE-D
 **Tool**: [duck.ai](https://duck.ai) (free, private)
 
-Ask the AI: *"List the main ethical concerns with using AI for clinical research involving vulnerable populations."* Then follow up with: *"Now critically evaluate your own answer — what did you miss or oversimplify?"* Compare the two responses. What does the self-critique add? What does it still fail to address? Reflect on whether an AI can meaningfully audit its own ethical blind spots.
+Choose one of the six SSAFE-D dimensions and ask the AI: *"How does [OpenAI / Google / Meta] perform on the [chosen dimension] of the SSAFE-D responsible AI framework?"* Then ask: *"What evidence would I need to verify your answer?"* Reflect on whether the AI can meaningfully evaluate its own developer's ethical record, and what this tells you about the Explicability and Accountability dimensions.
 
-### Exercise 3 — Who is responsible?
+### Exercise 3 — Ethics vs. law in AI research use
 **Tool**: [lumo.proton.me](https://lumo.proton.me) (free, GDPR-compliant)
 
-Ask: *"If an AI tool used in a research project causes harm to participants — for example, by generating stigmatising language in a report — who bears responsibility: the researcher, the institution, or the AI developer?"* Compare the AI's answer with your own view and with your group's discussion. Identify what the AI gets right, what it omits, and whether it acknowledges uncertainty.
+Present the following scenario: *"A researcher uses a proprietary AI tool to analyse qualitative interview data. The tool's terms of service allow the company to use uploaded data for training. Participants gave consent for their data to be used in the study but not for commercial AI training. Is this ethical? Is it legal?"* Compare the AI's answer with your own view. Identify where law and ethics diverge in this scenario, and what the researcher should have done differently.
 
 ## References
 
-1. Alan Turing Institute. *Operationalising Ethics in AI* (intermediate and expert levels). Open licence. [turing.ac.uk/courses](https://www.turing.ac.uk/courses)
-2. Alan Turing Institute. *Assessing and Mitigating Bias in AI*. Open licence. [turing.ac.uk/courses](https://www.turing.ac.uk/courses)
-3. EDUCAUSE AI Literacy Working Group. *AI Literacy in Teaching and Learning*. EDUCAUSE. [educause.edu](https://www.educause.edu)
-4. The Turing Way Community. *The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research*. CC BY 4.0. [book.the-turing-way.org](https://book.the-turing-way.org)
-5. UNESCO. (2021). *Recommendation on the Ethics of Artificial Intelligence*. UNESCO. [unesdoc.unesco.org](https://unesdoc.unesco.org/ark:/48223/pf0000381137)
-6. Jobin, A., Ienca, M., & Vayena, E. (2019). The global landscape of AI ethics guidelines. *Nature Machine Intelligence*, 1(9), 389–399. [doi.org/10.1038/s42256-019-0088-2](https://doi.org/10.1038/s42256-019-0088-2)
+1. Beauchamp, T. L., & Childress, J. F. (2019). *Principles of biomedical ethics* (8th ed.). Oxford University Press.
+2. Floridi, L. (2023). *The ethics of artificial intelligence: Principles, challenges, and opportunities*. Oxford University Press.
+3. ALLEA. (2023). *The European Code of Conduct for Research Integrity* (Revised ed.). ALLEA. [allea.org](https://allea.org/code-of-conduct/)
+4. Finnish National Board on Research Integrity TENK. (2023). *The Finnish Code of Conduct for Research Integrity*. [tenk.fi](https://www.tenk.fi)
+5. TENK. (2019). *Ethical review in human sciences*. Section 4.2. [tenk.fi](https://www.tenk.fi/sites/tenk.fi/files/Ihmistieteiden_eettisen_ennakkoarvioinnin_ohje_2019.pdf)
+6. Muthanna, A., Chaaban, Y., & Qadhi, S. (2024). A model of the interrelationship between research ethics and research integrity. *International Journal of Qualitative Studies on Health and Well-Being*, 19(1), 2295151. [doi.org/10.1080/17482631.2024.2295151](https://doi.org/10.1080/17482631.2024.2295151)
+7. The Alan Turing Institute. *Responsible AI: SSAFE-D framework*. [turing.ac.uk](https://www.turing.ac.uk)
+8. The Alan Turing Institute. *AI Governance in Practice*. [turing.ac.uk](https://www.turing.ac.uk)
+9. Stahl, B. C., & Eke, D. (2024). The ethics of ChatGPT — Exploring the ethical issues of an emerging technology. *International Journal of Information Management*, 74, 102700. [doi.org/10.1016/j.ijinfomgt.2023.102700](https://doi.org/10.1016/j.ijinfomgt.2023.102700)
+10. Bender, E. M., & Hanna, A. (2024). *The AI Con: How to fight big tech's hype and restore our future*. The New Press.
+11. Glerean, E., & Silva, P. (2025). *Generative AI in Research Work — Course slides*. Zenodo. [doi.org/10.5281/zenodo.14032261](https://doi.org/10.5281/zenodo.14032261) (CC-BY)
+12. European Commission. *Horizon Europe ethics self-assessment*. [aalto.fi support page](https://www.aalto.fi/en/aalto-community-hub/how-to-make-an-ethics-self-assessment-in-research-projects-aalto-support-and-guidelines)

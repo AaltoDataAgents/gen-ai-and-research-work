@@ -5,7 +5,7 @@ title: "Conclusions"
 ::: {.callout-warning}
 ## Draft — Not Yet Reviewed
 
-This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+The content in this chapter is being reviewed since Claude Code was used to convert the text from powerpoint slides to this webpage. Content may be incomplete, inaccurate, or require significant editing before use.
 :::
 
 The central message of this course is simple: resist the hype, and use AI tools responsibly — if you choose to use them at all. Generative AI is neither a revolution to be embraced uncritically nor a threat to be dismissed. Researchers who approach these tools with informed scepticism, grounded in ethics, integrity, and legal awareness, are best placed to use them wisely and to help shape how they are used in research communities.

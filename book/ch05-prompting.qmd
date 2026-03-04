@@ -5,7 +5,7 @@ title: "Prompting Techniques"
 ::: {.callout-warning}
 ## Draft — Not Yet Reviewed
 
-This chapter was generated using Claude Code as a starting skeleton and has not yet been fully reviewed or revised by the course instructors. Content may be incomplete, inaccurate, or require significant editing before use.
+The content in this chapter is being reviewed since Claude Code was used to convert the text from powerpoint slides to this webpage. Content may be incomplete, inaccurate, or require significant editing before use.
 :::
 
 Getting useful outputs from a generative AI system is a skill that can be learned and refined. This chapter introduces prompting from first principles and builds toward more advanced strategies, with examples drawn from common research tasks across the research lifecycle — from literature synthesis to manuscript drafting.
